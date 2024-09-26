@@ -1,0 +1,24 @@
+
+/* Css Propeties */
+
+h1{
+    /* 1. color property */
+    color: red;
+    /* 2. Background color property */
+    background-color: #000;
+}
+
+p{
+    color: blue;
+    background-color: coral;
+}
+
+button{
+    color: rgb(18, 90, 33);
+    background-color: yellow;
+}
+
+span{
+    color: rgb(255, 255, 0);
+    background-color: rgb(0, 255, 0);
+}

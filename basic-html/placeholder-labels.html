@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder and label attribute of form in HTML</title>
+</head>
+<body>
+    <form action="/server">
+        <div>
+            <label for="username">Username:
+                <input type="text" placeholder="Enter username" id="username" name="username"/>
+            </label>
+        </div>
+        
+        <div>
+            <label for="password">Password:
+                <input type="password" placeholder="Enter password" id="password" name="password"/>
+            </label>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" placeholder="Enter age" id="age" />
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button">Button</button>
+        <button type="reset">Reset</button>
+        <!-- <button type="menu">Menu</button> -->
+        <br/><br/>
+        <input type="button" value="click me" />
+        <input type="submit">
+
+    </form>
+    <hr>
+    <!-- More understanding with form action attribute -->
+     <form action="https://www.youtube.com/results">
+        <label for="search">Search in youtube</label>
+        <input type="text" name="search_query" placeholder="search in youtube">
+        <button>Search</button>
+     </form>
+</body>
+</html>

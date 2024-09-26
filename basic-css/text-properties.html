@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text properties in CSS</title>
+    <style>
+        h1{
+            text-align: right;
+            border:solid;
+            width: 50%;
+            text-decoration: none;
+            font-family: fantasy;
+        }
+        h2{
+            text-align: justify;
+            font-weight: normal; /* 400; */
+            text-decoration: double blue overline;
+            font-family: impact;
+        }
+        h3{
+            text-align: right;
+            text-decoration: orange line-through;
+            letter-spacing: normal;
+        }
+
+        p{
+            text-align: right;
+            line-height: 2.5;
+            /* text-decoration: red underline; */
+            letter-spacing: 5px;
+            font-size: 15px;
+            font-family: arial;
+        }
+        li{
+            font-weight:lighter;
+            text-decoration:wavy gold underline;
+            font-family: avant grade, didot, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            line-height:normal;
+        }
+    </style>
+</head>
+<body>
+    <h5>
+        Comments in CSS:
+        <br><span>Single line comment: //</span>
+        <br><span>Multi line comment: /* */</span>
+    </h5>
+    <h4>
+        There are few text properties in CSS:
+        <ol type="i">
+            <li>text-align: left/start, text-align: right/end, text-align: center, text-align:justify</li>
+            <li>font-weight: Normmally font weight lies b/w 100 to 900.  font-weight: normal; //400; font-weight: bold; //700; font-weight: 100; font-weight:bolder; font-weight: lighter;</li>
+            <li>text-decoration: Sets appearnace of decorative lines on text like underline. text-decoration:underline; text-decoration:overline; text-decoration:line-through</li>
+            <li>line-height: It controls the height of the line of text. line-height: normal; line-height: 2.5; 
+                line-height:1.5 //mean 1.5* normal;
+            </li>
+            <li>letter-spacing: It controls the horizontal spacing behaviour b/w text characters. letter-spacing:normal; letter-spacing:10px; //px = pixels.</li>
+        </ol>
+    </h4>
+    <hr>
+
+    <h1>Iron Man</h1>
+    <hr />
+    <p>
+        <a href="https://www.google.com">Google</a> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+    </p>
+    <h2>Publication history</h2>
+    <hr />
+    <h3>Premiere</h3>
+    <p>
+        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+    <h3>Solo Series</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <h2>Fictional character biography.</h2>
+    <hr />
+    <p>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+    </p>
+</body>
+</html>

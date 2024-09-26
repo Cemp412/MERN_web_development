@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in Html</title>
+</head>
+<body>
+    <form action="">
+        <!-- Input Elements -->
+        <input />
+        <br>
+        Username: 
+        <input type="text" />
+        <br>
+        Password: 
+        <input type="password" />
+        <br>
+        Number: 
+        <input type="number" />
+        <br>
+        Time:
+        <input type="time" />
+        <br>
+        Color:
+        <input type="color" />
+    </form>
+
+    <!-- Placeholders & Labels -->
+    <form action="/server">
+        <div>
+            <label for="username">Username:
+                <input type="text" placeholder="Enter username" id="username" name="username"/>
+            </label>
+        </div>
+        
+        <div>
+            <label for="password">Password:
+                <input type="password" placeholder="Enter password" id="password" name="password"/>
+            </label>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" placeholder="Enter age" id="age" />
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button">Button</button>
+        <button type="reset">Reset</button>
+        <!-- <button type="menu">Menu</button> -->
+        <br/><br/>
+        <input type="button" value="click me" />
+        <input type="submit">
+
+    </form>
+    <hr>
+    <!-- More understanding with form action attribute -->
+     <form action="https://www.youtube.com/results">
+        <label for="search">Search in youtube</label>
+        <input type="text" name="search_query" placeholder="search in youtube">
+        <button>Search</button>
+    </form>
+    <hr>
+    <br>
+    <!-- Input element -> checkbox -->
+     <form action="/source-to-server">
+        <input type="checkbox" id="opinion" name="opinion" value="yes"/>
+        <label for="opinion">Opinion</label>
+        <input type="checkbox" id="age" name="age" checked/>
+        <label for="age">I am 18+</label>
+        <button>Submit</button>
+     </form>
+     <hr>
+    <br>
+
+    <!-- Input element -> Radio button -->
+    <form action="/source-to-server"> 
+    <!-- NOTE: To check onlyone from all we need to keep all the radio/checkbox btn withthe same names. -->
+    <input type="radio" name="fruit" id="apple" value="apple"/>
+    <label for="apple">Apple</label>
+    <input type="radio" name="fruit" id="mango" value="mango"/>
+    <label for="mango">Mango</label>
+    <input type="radio" name="fruit" id="banana" value="banana"/>
+    <label for="banana">Banana</label>
+    <button>Submit</button>
+    </form>
+    <hr>
+    <br>
+
+    <!-- Select Elements -->
+    <form action="/source-to-server">
+        <label for="profession">Select your profession</label>
+        <select name="profession" id="profession">
+            <option value="">Select your profession</option>
+            <option value="stu">Student</option>
+            <option value="dev">Developer</option>
+        </select>
+        <button>Submit</button>
+    </form>
+    <hr>
+    <br>
+    <!-- Input element -> Range -->
+     <form action="/source-to-server">
+        <label for="volume">Select your volume level</label>
+        <input type="range" min="0" max="100" name="vol" id="volume" step="10" value="10"/>
+        <button>Submit</button>
+     </form>
+    <hr>
+    <br>
+
+    <!-- textarea element -->
+    <form action="/source-to-range">
+        <label for="feedback">Please provide your valuable feedback.</label>
+        <textarea name="feedback" id="feedback" rows="5"  placeholder="Write your feedback here"></textarea>
+        <button>Submit</button>
+    </form>     
+</body>
+</html>

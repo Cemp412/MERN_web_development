@@ -1,0 +1,206 @@
+1. CSS -> stands for Cascading Style Sheets
+
+Q1. What is CSS?
+Ans- It is a language that is used to describe the style of a document.
+
+2. CSS properties: text, color, bg color, button appearance.
+3. h1{
+	color: red;
+      } // where h1-> selector; color->property; red->value;
+
+4. NOTE: mdn CSS (reference link)
+
+Q2. How to include styles?
+* Inline Styles: Writting style directly inline on each element.
+<h1 style="color:red;">Apna College </h1>
+
+* Style tag: Style is added using the <style> element in the same document.
+ex: <style>
+	h1{
+		color:red;
+	}
+	</style>
+
+* External Style sheet: Writting CSS in a seperate document & linking it with HTML file.
+
+5. <link rel="stylesheet" href="css/style.css" > //rel=relation
+
+6. Properties in CSS
+1. Color property: Used to set color of foreground.
+	color:purple;
+	color: #fff;
+	color: rgb(214, 122, 127);
+
+7. Color Systems: 
+	*Named colors:  color = black;
+	*Each browser recognizes around 140 named colors.
+	*Eg: red, blue, pink, purple, magenta, teal etc.
+
+	
+	* RGB color system: RGB = Red + Green + Blue [Red Green Blue(0-255)]
+	* ex: red is rgb(255, 0, 0);
+	2. black is rgb(0, 0, 0);
+	3. blue is rgb(0, 0, 255);
+	4. yellow is rgb(255, 255, 0);
+
+	
+	*Hexadecimal or Hex color system: 
+		ex: color: #FFFFFF;
+	Letters: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, A, B, C, D, E, F
+
+8. Note: We can also pick colors by searching color picker on google.
+
+
+Date: 20-09-2024
+9. Text properties in CSS
+These properties are aligned on the center/left/right anywhere according to its parent element.
+i. text-align: left/start, text-align: right/end, text-align: center, text-align:justify
+ii. font-weight: lies b/w 100 - 900 value. font-weight: normal; //400; font-weight: bold; //700; font-weight: 100; font-weight:bolder; font-weight: lighter;
+iii. text-decoration: Sets appearnace of decorative lines on text like underline. text-decoration:underline; text-decoration:overline; text-decoration:line-through,double,dotted, wavy, text-decoration: none; etc. 
+iv. line-height:It controls the height of the line of text. line-height: normal; line-height: 2.5; 
+                line-height:1.5 //mean 1.5* normal;
+v. letter-spacing:It controls the horizontal spacing behaviour b/w text characters. letter-spacing:normal; letter-spacing:10px; //px = pixels.
+
+vi. font-size:
+Font-size: units in CSS
+Absolute: px, pt, pc, cm, mm, in
+Relative: %, em, rem, ch, vh, vw+ many more
+
+96 px = 1 inch(in)
+72 pt =	1 in
+12 pt = 1  pc
+
+* Pixels(px): Most commonly used absolute unit.
+96px = 1 inch (in)
+not suitable for responsive websites.
+
+* Font-family: Specifies a priortized list of one or more font family names.
+ex: font-family:arial;
+font-family: avant grade, didot, sans-serif; //backup family of fonts.
+
+//Note: Css fonts-family: www.cssfontstack.com // go and explore various fonts.
+
+
+date: 23-09-2024
+1. Selectors in CSS: 
+
+h1 {
+	color:red; //color->property; value->red; h1->selector;
+}
+
+2. Universal selector: This is used to select everything in a document.
+			*{
+				property:value;  //*->asterisk
+			}
+3. Element selector:Used to Select all the elements of same type.
+	h1{
+	color:#b92b27;
+	}
+4. ID selector: Selects an element based on the value of the element's id attribute.
+#myId {
+ 	property: value;
+}
+
+5. Class selector: Selects an element based on their class attribute.
+.myClass{
+	property:value;
+}
+
+6.Descendant Selector: It selects all paragraphs inside divs.
+div p{
+	selector:value;
+} //descendant selector
+
+7. Adjacent Sibling Combinator: Heading3 that comes immediately after any paragraph.
+	p + h3 {
+		property:value;
+	} // + -> sibling combinator.
+
+8. Child combinator: Select all buttons which are direct children of spans.
+	span > button {
+		property:value;
+	} // > -> child selector (direct next level element).
+
+9. Attribute Selector: Selects element based on the presence or value of a given attribute.
+	input[attr = "value"]{
+		property:value;
+	} // attr -> attribute selector
+
+input[type] {
+	color:red;
+}
+
+//mdn attribute selector
+
+10. Pseudo Class: A keyword added to a selector that specifies a special state of selected elements(s).
+	:hover ->
+h3:hover{
+    text-decoration: overline;
+    background-color: hotpink;
+}
+	:active -> 
+button:active{
+    background-color: rgb(243, 16, 92);
+    font-weight:bold;
+    color: black;
+}
+	:checked -> radio, checkboxes
+input[type="radio"]:checked + label{
+    color: #b92b27;
+    font-weight: bold;
+}
+	:nth-of-type ->
+div:nth-of-type(2n) {
+    background-color: blanchedalmond;
+}
+ 
+// Refer to mdn psuedo class.
+
+11. Pseudo Elements: A keyword added to a selector that lets you style a specific part of the selected elements(s).
+	::first-letter:
+	::first-line:
+	::selection:
+
+12. CSS:Cascading StyleSheets
+Qs1. What is cascade in CSS?
+Ans- The css cascade algorithm's job is to select CSS declarations in order to determine the correct values for css properties.
+h2 {
+	background-color: yellow;
+}
+
+h2 {
+	background-color:blue;
+} // final color is blue.
+
+13. Selector specificity:  
+Qs. What is specificity?
+Ans- Specificity is an algorithm that calculates the weight that is applies to a given css declaration. (Review selector specifiity while making notes).
+
+	id > class > element
+
+14. !important: To show the most specific thing in the document.
+	h2{
+		background-color:blue !important;
+	}
+15. Inheritance In css: 
+
+/*********** Intermediate CSS *************/
+
+16. Box Model: Height,Width, Border, padding, margin.
+
+	1. Height: By default, it sets the content area height of the element.
+	div{
+		height:100px;
+	}
+
+	2. Width: By default, it sets the content area width of the element.
+	div{
+		width:300px;
+	}
+	
+	3. Border: Used to set an element's border. *border-width, *border-style, *border-color
+	div{
+		border-width: 2px;
+		border-style: solid;
+		border-color:black;
+	}
