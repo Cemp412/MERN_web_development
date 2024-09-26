@@ -39,7 +39,7 @@ Welcome to the **Complete MERN Web Development Course**! This comprehensive cour
   ### Mini Projects
 
   **** Resources ****
-Official MongoDB Documentation
-Express.js Documentation
-React.js Documentation
-Node.js Documentation
+Official MongoDB Documentation : https://www.mongodb.com/
+Express.js Documentation : https://expressjs.com/
+React.js Documentation : https://react.dev/
+Node.js Documentation : https://nodejs.org/docs/latest/api/
