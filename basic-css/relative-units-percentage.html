@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Units (Percentage) in CSS</title>
+    <style>
+        h1{
+            border: 2px solid black;
+            width: 50%;
+        }
+
+        #outer{
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+            margin: 50px;
+            font-size: 20px;
+        }
+
+        #inner{
+            height: 100px;
+            width: 100px;
+            background-color: cornflowerblue;
+            margin-left: 10%;
+            font-size: 2em;
+            padding: 1em;
+        }
+
+        button{
+            font-size: 50px;
+            border-radius: 15px;
+            border: 5px solid green;
+            padding-left: 1em; /* padding is similar as font-size of the element which mean 1em = 1* font-size => 50px; */
+            padding-right: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <div id="outer"> this is outer
+        <div id="inner">This is inner</div>
+    </div>
+
+    <button>Click Me</button>
+</body>
+</html>

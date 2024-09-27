@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawbacks of em- snowball effects</title>
+    <style>
+        section{
+            font-size: 15px;
+        }
+        div{
+           /*  font-size: 2em; */
+           /* font-size: 0.5em; */
+           font-size:2rem;  /* rem-> set font size according to size of root element. (2 * font-size of section element.) */
+        }
+    </style>
+</head>
+<body>
+    <section> Section
+        <div> div 1
+            <div> div 2
+                <div>div 3</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
