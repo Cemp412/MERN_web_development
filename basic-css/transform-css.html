@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform CSS in html</title>
+    <style>
+        section{
+            margin-top: 100px;
+        }
+
+        div{
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            background-color: #7aa874;
+            border:2px solid black;
+            margin: 10px;
+        }
+
+        div:nth-of-type(2n) {
+            background-color: #f7db6a;
+        }
+
+        div:nth-of-type(3n) {
+            background-color: #ebb02d;
+        }
+
+        /* transform */
+        #one{
+            transform: rotate(45deg); /* 90deg| 180deg | -45deg */
+        }
+
+        #two{
+            transform: scale(0.5); /* scale(2, 0.4) (x, y); scaleX(0.4); scaleY(0.3);*/
+        }
+
+        #three{
+            transform: translateX(100px); /* //translateY(100px); || translate(100px, 100px); */
+        }
+
+        #four{
+            transform: skew(30deg); /* skew(-90deg) */
+        }
+
+        #five{
+            transform: rotate(30deg) translateX(150px);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <div id="five">5</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Channel CSS</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: rgba(255, 0, 0, 0.4); /* Alpha channel opacity */
+        }
+
+        #opacity{ /* set ki ha div element ki opacity so under ke elements bhi hide ho jaenge. */
+            background-color: #ffa511;
+            opacity: 0.3;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id="opacity">
+        <h3>Heading</h3>
+        <button>Click me!</button>
+    </div>
+</body>
+</html>
