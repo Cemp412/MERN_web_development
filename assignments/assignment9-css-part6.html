@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment9 css part 6</title>
+    <style>
+        .container{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-rows: repeat(12, 1fr);
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .container div{
+            background-color: pink;
+            font-size: 1.5em;
+        }
+
+        .header{
+            grid-column: 1/span 12;
+        }
+
+        .sidebar{
+            grid-row: 2/span 10;
+            grid-column: 1/span 3;
+        }
+
+        .navigation{
+            grid-column: 4/span 6;
+        }
+
+        .main{
+            grid-row: 3/span 9;
+            grid-column: 4/span 6;
+        }
+
+        .ads{
+            grid-row: 2/span 10;
+            grid-column: 10/span 3;
+        }
+
+        .footer{
+            grid-column: 1/span 12;
+        }
+
+        @media(max-width:720px) {
+            .navigation{
+                grid-column: 1/span 12;
+                grid-row: 2;
+            }
+
+            .sidebar{
+                grid-row: 3/span 9;
+                grid-column: 1/span 3;
+            }
+
+            .main{
+                grid-row: 3/span 9;
+                grid-column: 4/span 9;
+            }
+
+            .ads{
+                grid-column: 1/span 3;
+                grid-row: 12;
+            }
+
+            .footer{
+                grid-row: 12;
+                grid-column: 4/span 9;
+            }
+
+        }
+
+        .loader{
+            border: 1px solid #f3f3f3;
+            border-top: 16px solid goldenrod;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            
+        }
+
+        @keyframes spin {
+            0%{
+                /* set rotation to 0 degrees */
+                transform: rotate(0deg);
+            }
+
+            100%{
+                /* set rotation to 360 degrees */
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Qs1. Create the following layout using CSS Grid:</h1>
+    <div class="container">
+        <div class="header">header (1row, 12column)</div>
+        <div class="sidebar">sidebar (10row, 3column)</div>
+        <div class="navigation">navigation (1row, 6column)</div>
+        <div class="main">main (9row, 6column)</div>
+        <div class="ads">ads (10row, 3column)</div>
+        <div class="footer">footer (1row, 12column)</div>
+    </div>
+
+    <hr>
+
+    <h1>s3.Try to complete this code to create a web page loader using CSS animations.</h1>
+    <div class="loader"></div>
+</body>
+</html>

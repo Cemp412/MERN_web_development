@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations in CSS</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 300px;
+            background-color: pink;
+            color: aliceblue;
+
+            /* animation-name: fontAnimation;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 4;
+            animation-direction: normal; */
+
+           /*  animation-name: colorAnimate;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+            animation: colAnimate 4s ease-in 2s infinite normal;
+           
+        }
+
+        @keyframes colAnimate{
+			0%{
+				background-color: rgb(9, 247, 9);
+			}
+			50%{
+				background-color: yellow;
+			}
+            80%{
+				background-color: rgb(252, 3, 3);
+			}
+			100% {
+				background-color:rgb(6, 43, 255);
+			}
+		}
+
+        @keyframes widthAnimate{
+            from { 
+                width: 10px;
+                background-color: darkolivegreen;
+            }
+            to {
+                width: 100px;
+                background-color: chocolate;
+            }
+        }
+
+        @keyframes fontAnimation{
+            from{font-size: 20px;}
+            to{font-size: 40px;}
+        }
+
+        @keyframes colorAnimate{
+            from{background-color: darkolivegreen;}
+            to{
+                background-color: chocolate;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animations</h1>
+    <div class="box">This is a box.</div>
+</body>
+</html>
