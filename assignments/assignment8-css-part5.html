@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment8 CSS part 5</title>
+    <style>
+        #container{
+            height: 400px;
+            width: 400px;
+            border: 2px solid skyblue;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #container div {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 50px;
+            background-color: grey;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #container-two{
+            height: 50px;
+            width: 900px;
+            background-color: lightpink;
+            border: 2px solid skyblue;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            /* justify-content: space-evenly; */
+            align-items: center;
+            padding: 0px;
+        }
+
+        #container-two div {
+            height: 50px;
+            width: 80px;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qs1. Recreate the following layout using flex as closely as possible:</h1>
+    <div id="container">
+        <div id="a">A</div>
+        <div id="b">B</div>
+        <div id="c">C</div>
+        <div id="d">D</div>
+        <div id="e">E</div>
+        <div id="f">F</div>
+        <div id="g">G</div>
+        <div id="h">H</div>
+        <div id="i">I</div>
+    </div>
+    <hr>
+    <h1>Recreate the following  layout as closely as possible</h1>
+    <div id="container-two">
+        <div>logo</div>
+        <div>Home</div>
+        <div>About</div>
+        <div>Contact</div>
+    </div>
+</body>
+</html>

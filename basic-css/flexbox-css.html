@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox CSS in html</title>
+    <style>
+        #container{
+            height: 600px;
+            width: 50%;
+            background-color: azure;
+            margin: 10px auto;
+            border: 2px solid black;
+            display: flex; /* row */
+            flex-direction: row; /* column-reverse; row-reverse; */
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+        #org{
+            align-self: flex-end;
+            /* flex-basis:50px; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            flex: 2 2 100px;
+        }
+
+        #blue{
+            /* flex-basis:400px; */
+            /* flex-grow: 1; */
+            max-width: 400px;
+            flex-shrink: 2;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #container div{
+            height:100px;
+            width: 200px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Playground</h1>
+    <div id="container">
+        <div style="background-color: #9400d3;">violet</div>
+        <div style="background-color: #4b0082;">indigo</div>
+        <div id="blue" style="background-color: #0000ff; height: 200px;">blue</div>
+        <div style="background-color: #00ff00;">green</div>
+        <div style="background-color: #ffff00;">yellow</div>
+        <div id="org" style="background-color: #ff7f00; height: 200px;">orange</div>
+        <div style="background-color: #ff0000;">red</div>
+    </div>
+</body>
+</html>

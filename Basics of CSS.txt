@@ -323,4 +323,167 @@ ex:
  * fixed: The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport.
 
 // mdn position related exceptions. //position:sticky
+
+
+Date: 01-10-24
+
+1). Flexbox (Flexible box layout): It is one dimensional layout method for arranging items in rows or columns.
+	
+	* Flexbox Direction: It sets how flex items are placed in the flex container, along which axis and direction.
+	** flexbox-direction: row;  //main axis -> left to right.
+	** flexbox-direction: row-reverse; //main axis -> right to left
+	** flexbox-direction: column; //main axis -> top to bottom
+	** flexbox-direction: column-reverse; //main axis -> bottom to top
+
+	*Justify Content: Tells how the browser distributes space between and around content items along the main axis.
+	** justify-content: flex-start;
+	**justify-content: flex-end;
+	**justify-content: center;
+	**justify-content: space-between;
+	**justify-content: space-around;
+	**justify-content: space-evenly;
+
+	* Flex Wrap: Sets whether flex items are forced onto one line or can wrap onto multiple lines.
+	** flex-wrap:nowrap;
+	** flex-wrap:wrap;
+	** flex-wrap: wrap-reverse;
+
+	*Align-items: Distributes our items along the cross axis.
+	**align-items: flex-start;
+	**align-items: flex-end;
+	**align-items: center;
 		
+	*Align Content: It sets the distribution of space between and around content items along a flexbox's cross axis.
+	**align-content: flex-start/flex-end/center
+	**align-content: space-between/space-around/evenly
+	**align-content: baseline;
+
+	*Flex Sizing: 
+	**flex-basis: It sets the initial main size of a flex item. ex: flex-basis:100px;
+	**flex-grow: It specifies how much of the flex container's remaining space should be assigned to the flex's item main size. ex: flex-grow:1
+	**flex-shrink: It sets the flex shrink factor of a flex item. flex-shrink:1
+
+2. Flex shorthand: 
+	ex: flex-grow | flex-shrink | flex-basis  => flex: 2 2 100px;
+	ex: flex-grow | flex-basis => flex: 2 100px;
+	ex: flex-grow(unitless) => flex: 2;
+	ex: flex-basis => flex: 100px;
+
+
+Date: 02-10-2024
+
+3. CSS Grid: Setting container's display to grid will make all children grid items. ex: container{ display:grid; }
+
+	1). Grid Model: It is a 2d model(row, column grid). //Grid cell //Grid lines //Grid track
+
+	2). Grid Template: They dfine the lines and track sizing. //grid-template-rows:100px 100px //grid-template-columns: auto auto auto (auto-> it divide div into auto = 3 number of times to column.)
+	3). Grid template: Repeat is used to divide all available space.
+		//grid-template-rows: repeat(count, 1fr); // 1fr -> 1 fraction of 100% width of available space.
+		//grid-template-columns: repeat(count, 1fr);
+		//grid-template-rows: repeat(2, 1fr);
+		//grid-template-rows: 1fr 1fr 1fr;
+	4). Grid gaps: They define the gaps b/w the lines. //row-gap //column-gap // grid-gap:rowGap columnGap. //grid-gap: 10px 30px;
+	5). Grid columns: Define an item's starting & ending position inside the column.
+		//grid-column-start: line_number
+		//grid-column-end: line_number
+		//grid-column: start_col/ end_col
+		//grid-column: start_col/ span number
+	6). Grid Rows: Defines an item's starting & ending position inside the row.
+		//grid-row-start: line_number
+		//grid-row-end: line_number
+		//grid-row: start_row/end_row
+		//grid-row: start_row/span number
+
+	7). Common grid properties: *justify-items (container); *justify-self(item) ] horizontal
+				*align-items (container); *align-self (item) ] vertical
+				*place-items *place-self
+
+	8). Animations in CSS: To animate css elements.
+		Syntax: @keyframes myName{
+			from {font-size:20px;}
+			to {font-size:40px;}
+		}
+	** CSS Animations: 
+		* animation-name: 
+		*animation-duration:  
+		*animation-timing-function: 
+		*animation-delay:
+		*animation-iteration-count:
+		*animation-direction:
+
+//refer mdn animation-direction
+
+	
+	@keyframes widthAnimate{
+		from { width: 10px; }
+		to {width: 100px;}
+	}
+
+**CSS animation short-hand: animation: widthAnimate 2s ease-in 0s infinte normal;
+
+*** % in Animation: @keyframes myName {
+			0%{
+				background-color: green;
+			}
+			50%{
+				background-color: yellow;
+			}
+			100% {
+				background-color:blue;
+			}
+		}
+
+** Media queries: Help to create responsive websites.
+	@media(width:490px) {
+		div{
+			background-color:red;
+		}
+	}
+
+**min-width / max-width:  @media(min-width:400px) {                      
+				div{
+					background-color: red;
+				}
+			}
+
+		@media(max-width:400px) {
+			div{
+				background-color: yellow;
+			}
+		}
+
+
+**width (of viewport)
+	@media(min-width:200px)and(max-width:300px){
+		div{
+			background-color:red;
+		}
+	}
+//refer media features mdn //viewport mdn
+
+*** @media(orientation:landscape) {
+	div{
+		background-color: blue;
+	}	
+  }
+
+
+**** z-index: It decides the stack level of elements. Overlapping elements with a larger z-index cover those with a smaller one.
+	z-index: auto(0);
+	z-index: 1/ 2/
+	z-index: -1/-2
+
+
+
+
+
+
+/*************************** Mini project CSS **********************************/
+
+# Basic design principles: (For better looking websites)
+	1). Color Theory: // Refer canva color wheel
+	2). Typography: Style & Appearance of Text //refer mdn typography
+		** font-families: sans-serif; serif; monospace; cursive; fantasy
+	3). Google fonts:  refer google fonts
+	4). Icons: Font Awesome, Google Icons
+		Font Awesome: To use font-awesome link: go to cdnjs.com
