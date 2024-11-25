@@ -1,3 +1,4 @@
+
 1. CSS -> stands for Cascading Style Sheets
 
 Q1. What is CSS?
@@ -276,7 +277,8 @@ eg: width: 33.33% //relative to the parent.
 		*Unit Rem (Root Em): Font size of the root element.
 
 	*** NOTE ****
-	Li(listitems) have their display property set to “list-item” by default which makes them a bulleted list item. When this property is reset by you to “inline”, then the bullet points also disappear. In a way, we override the default settings with our CSS
+	Li(listitems) have their display property set to “list-item” by default which makes them a bulleted list item.
+When this property is reset by you to “inline”, then the bullet points also disappear. In a way, we override the default settings with our CSS
 
 
 
@@ -316,11 +318,13 @@ ex:
 	background-image: url("../somepath/..img.jpg); 
 	background-size: contain/cover/auto;
 
-7. Position: The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.
+7. Position: The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left
+ properties determine the final location of positioned elements.
  * Static: The top, right, bottom, left and z-index properties have no effect. This is the default value.
  *relative: The offset is relative to itself based on the values of top, right, bottom and left.
  *absolute: The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, If any; otherwise, it is placed relative to the initial containing block. 
- * fixed: The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport.
+ * fixed: The element is removed from the normal document flow, and no space is created for the element in the page layout. 
+It is positioned relative to the initial containing block established by the viewport.
 
 // mdn position related exceptions. //position:sticky
 
@@ -376,7 +380,8 @@ Date: 02-10-2024
 
 	1). Grid Model: It is a 2d model(row, column grid). //Grid cell //Grid lines //Grid track
 
-	2). Grid Template: They dfine the lines and track sizing. //grid-template-rows:100px 100px //grid-template-columns: auto auto auto (auto-> it divide div into auto = 3 number of times to column.)
+	2). Grid Template: They dfine the lines and track sizing. 
+//grid-template-rows:100px 100px //grid-template-columns: auto auto auto (auto-> it divide div into auto = 3 number of times to column.)
 	3). Grid template: Repeat is used to divide all available space.
 		//grid-template-rows: repeat(count, 1fr); // 1fr -> 1 fraction of 100% width of available space.
 		//grid-template-columns: repeat(count, 1fr);
@@ -487,3 +492,32 @@ Date: 02-10-2024
 	3). Google fonts:  refer google fonts
 	4). Icons: Font Awesome, Google Icons
 		Font Awesome: To use font-awesome link: go to cdnjs.com
+
+
+
+/******************************** BOOTSTRAP **********************************************/
+
+1). Bootstrap: Bootstrap is a powerful, feature-locked frontend toolkit. Build anything from prototype to production -in minutes.
+	** Benefits of Bootstrap: 
+		1). Makes development easier & faster.
+		2). Good choice of pre-built components.
+		3). Good browser compatibility.
+
+
+** CDN -> Content Delivery Network
+
+Qs. What we will cover?
+Ans- * Components: pre-built and reusable piece of user interface (UI). eg: button, forms.
+     * Layouts: Over all structure and arrangement of the elements. eg: container, grid. 
+
+1). Layout :
+	i). Container: Container are used to contain, pad, and (sometimes) center the content within them.
+	ii). Grid: 12 column system.
+
+2).Components: 
+	i). Buttons: primary, secondary, success, danger, warning, info, light, dark, link
+	ii). Badges
+	iii). Alert
+	iv). Button Group
+	v). Navbar
+	vi). Card
