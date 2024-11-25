@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1. Object of Objects</h1>
+    <script>
+        const classInfo = {
+            aman : {
+                grade: "A+",
+                city: "Delhi"
+            },
+
+            shradha: {
+                grade: "A",
+                city: "Pune",
+            },
+
+            karna: {
+                grade: "0",
+                city: "Mumbai",
+            }
+        };
+        console.log(classInfo);
+        console.log(classInfo.aman);
+        console.log(classInfo.shradha.city);
+    </script>
+
+    <h1>2. Array of Objects</h1>
+    <script>
+        const info = [
+            {
+                name: "aman",
+                grade: "A++",
+                city: "Delhi",
+            },
+            {
+                name: "shradha",
+                grade: "A++",
+                city: "Pune",
+            },
+            {
+                name: "karan",
+                grade: "o",
+                city: "Mumbai",
+            }
+        ];
+
+        console.log(info[1].grade);
+        info[1].city = "noida";
+        console.log(info[1].city);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Scope</h1>
+    <h3>1. Function Scope</h3>
+    <script>
+        let sum = 54; //Global Scope
+        function calSum(a, b){
+            let sum = a + b; //Function scope
+            console.log(sum); //scope variable
+        }
+
+        calSum(8, 90);
+        console.log(sum); //Global varible
+    </script>
+
+    <h3>2. Block Scope</h3>
+    <script>
+        { //Block scope
+            let a = 121;
+            const b = 45;
+            var c = 56; // block scope not work for var datatype
+        }
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    </script>
+
+    <h3>3. Lexical Scope</h3>
+    <script>
+        function outerFunc() {
+            let x = 5;
+            let y = 6;
+
+            function innerFunc() {
+                console.log(x);
+                let z = "90";
+            }
+
+            console.log(z); //not possible to access in outer function.
+        }
+
+        innerFunc();
+    </script>
+</body>
+</html>

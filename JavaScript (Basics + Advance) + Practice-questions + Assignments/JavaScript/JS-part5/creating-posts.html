@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread/ Twitter Post in JS</title>
+</head>
+<body>
+    <h1>Thread / Twitter post in JS</h1>
+    <script>
+        let post = {
+            username: "@rachita_saxena",
+            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sapiente odio sunt ipsum rerum iste, repellat corrupti facere quibusdam tempore ullam molestias nisi velit neque, qui officiis maxime a soluta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sapiente odio sunt ipsum rerum iste, repellat corrupti facere quibusdam tempore ullam molestias nisi velit neque, qui officiis maxime a soluta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sapiente odio sunt ipsum rerum iste, repellat corrupti facere quibusdam tempore ullam molestias nisi velit neque, qui officiis maxime a soluta.",
+            likes: "1k+",
+            reposts: 200,
+            tags: ["@apnapage", "@apkaapnapage", "@chaipecharcha"],
+        }
+
+
+        //Get values in Js
+        post["username"];
+        post.username;
+        document.write(post["content"]);
+
+        let prop = "reposts";
+        console.log(post[prop]);
+        console.log(post.prop); //It doesn't work
+
+        const Obj = {
+            1: "a",
+            2: "b",
+            true: "c",
+            null: "d",
+            undefined: "e",
+        }
+
+        console.log(Obj[1]); //obj[1] -> that converted into string itself by java script.
+        console.log(Obj[true]);
+        console.log(Obj[null]);
+
+    </script>
+</body>
+</html>

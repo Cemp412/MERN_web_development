@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Try this in event listeners in JavaScript.</h1>
+    <h3>Let's try it.</h3>
+    <p>This is a normal pargraph.</p>
+    <button>Click me!</button>
+    <script>
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", function() {
+            console.log(this);
+            console.dir(this);
+            console.dir(this.innerText);
+            this.style.backgroundColor = "grey";
+        });
+
+        let h1 = document.querySelector("h1");
+        let h3 = document.querySelector("h3");
+        let p = document.querySelector("p");
+
+        function changeColor() {
+            console.dir(this.innerText);
+            this.style.backgroundColor = "blue";
+        }
+
+        h1.addEventListener("click", changeColor);
+        h3.addEventListener("click", changeColor);
+        p.addEventListener("click", changeColor);
+    </script>
+</body>
+</html>

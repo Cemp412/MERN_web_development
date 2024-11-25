@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Try catch in JS</h1>
+    <p>
+        * The try statement allows you to define a block of code to be tested for errors while it is being executed.
+    * The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+    try{
+        console.log(a);
+    }
+    catch(error){
+        console.log("variable doesn't exist.");
+        console.log(error);
+    }
+    </p>
+    <script>
+        console.log("hello");
+        console.log("hello");
+        try{
+            console.log(a);
+        }catch{
+            console.log("Caught an error.. a is not defined.");
+        }
+        console.log("hello2");
+        console.log("hello2");
+        console.log("hello2")
+
+        //another way to create catch block and handling error.
+        try{
+        console.log(a);
+        }
+        catch(error){
+            console.log("variable doesn't exist.");
+            console.log(error);
+        }
+    </script>
+</body>
+</html>

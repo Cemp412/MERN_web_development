@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This with arrow function.</h1>
+    <script>
+        const student = {
+            name: "aman",
+            marks: 95,
+            prop: this, //global scope()
+            getName: function() {
+                console.log(this);
+                return this.name;
+            },
+            getMarks: () => {
+                console.log(this); //parent's scope -> window object
+                return this.marks;
+            },
+
+            getInfo1: function () {
+                setTimeout(() => {
+                    console.log(this); //arrow function: this refer's to parent (student) object.
+                }, 2000);
+            },
+
+            getInfo2: function() {
+                setTimeout(function () {
+                    console.log(this); //normal funtion : this refer's to window object.
+                }, 2000);
+            },
+        };
+
+        student.getName();
+        student.getMarks();
+        student.getInfo1();
+        student.getInfo2();
+        const a = 5;
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Qs1. Square and sum the array elements using arrow function and then find theaverage of the array.</h3>
+    <script>
+        let nums = [2, 9, 7, 6, 4, 3, 1];
+        const Square = nums.map((num) => num * num);
+        const sum = Square.reduce((acc, curr) => acc + curr, 0)
+        const avg = sum/nums.length;
+        console.log(avg);
+    </script>
+
+    <h3>Qs2. Create a new array using the map function whose each element is equal to the original element plus 5.</h3>
+    <script>
+        let newArr = nums.map((el) => el + 5);
+        console.log(newArr);
+    </script>
+    <h3>Qs3. Create a new array whose elements are in uppercase of words present in the original array.</h3>
+    <script>
+        let fruits = ["apple", "banana", "mango", "kiwi", "orange"];
+        let fruitsArr = fruits.map((str) => str.toUpperCase());
+        console.log(fruitsArr);
+    </script>
+    
+    <h3>Qs4. Write a function called doubleAndReturnArgs which accepts an array and a variable number of arguments. The function should return a new array with the original array values and all of the additional arguments doubled.</h3>
+    <script>
+        const doubleAndReturnArgs = (arr, ...args) => [
+            ...arr,
+            ...args.map((v) => v * 2)
+        ];
+        console.log(doubleAndReturnArgs([1, 2, 3], 4, 4)); //[1, 2, 3, 8, 8]
+        console.log(doubleAndReturnArgs([2], 10, 4)); //[2, 20, 8]
+    </script>
+    <h3>Qs5. Write a function called mergeObjects that accepts two objects and returns a new object which contains all the keys and values of the first object and second object.</h3>
+    <script>
+        let mergeObjects = (obj1, obj2) => ({...obj1, ...obj2});
+        console.log(mergeObjects({a:1, b:2}, {c:3, d:4})); //{a:1, b:2, c:3, d:4}
+    </script>
+</body>
+</html>

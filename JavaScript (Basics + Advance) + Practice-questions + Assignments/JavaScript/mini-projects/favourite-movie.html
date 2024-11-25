@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite movie in JS</title>
+</head>
+<body>
+    <h1>Favourite movie in JS</h1>
+    <h2>Enter "quit" to exit the game.</h2>
+    <script>
+        const favMovie = "Raazi";
+        let guess = prompt("Enter my favourite movie?");
+        
+        while((guess != favMovie) && (guess != "quit")){
+            
+            guess = prompt("wrong guess, Please try again.");
+            console.log(guess);
+        }
+
+        if(guess == favMovie) {
+            alert("congrats!!");
+        }
+        else{
+            console.log("you quit");
+        }
+    </script>
+</body>
+</html>

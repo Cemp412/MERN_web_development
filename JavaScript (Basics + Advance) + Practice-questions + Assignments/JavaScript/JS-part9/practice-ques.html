@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color:red;
+        }
+
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h3>Qs. Add the following elements to the container using only JavaScript and the DOM methods.</h3>
+    <p>i. a "<"p">" with red text that says "Hey, I'm red!" </p>
+    <p>ii. an "<"h3">" with blue text that says "I am a blue h3!"</p>
+    <p>iii. a "<" div ">" with a black order and pink background color with the following elements inside of it:
+        <br>
+        <ul>
+            <li>another "<"h1">" that says "I'm in a div."</li>
+            <li>a "<"p">" that says "ME TOO!"</li>
+        </ul>
+    </p>
+    <script>
+        let para = document.createElement('p');
+        para.innerHTML = "Hey, I'm red!";
+        let body = document.querySelector("body")
+        body.append(para);
+        para.classList.add("red");
+
+        let h3 = document.createElement("h3");
+        h3.innerHTML = "I'm a blue h3!"
+        body.append(h3);
+        h3.classList.add("blue")
+
+        let div = document.createElement("div");
+        body.append(div);
+        let h1 = document.createElement("h1");
+        h1.innerText = "I'm a div";
+        div.appendChild(h1)
+
+        div.style.backgroundColor ="pink";
+        div.style.border = "solid black 2px";
+
+        let p = document.createElement("p");
+        p.innerText = "ME TOO!";
+        div.appendChild(p);
+
+    </script>
+</body>
+</html>

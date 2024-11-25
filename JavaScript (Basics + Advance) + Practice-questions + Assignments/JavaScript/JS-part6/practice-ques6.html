@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Qs. Create a function that returns the concatenation of all strings in an array.</h3>
+    <script>
+        let str = ["hii", "hello", "bye", "!"];
+
+        function concat(){
+            let result = "";
+            for(let i=0; i<str.length; i++) {
+                result += str[i];
+            }
+
+            return result;
+        }
+
+        console.log(concat(str));
+    </script>
+</body>
+</html>

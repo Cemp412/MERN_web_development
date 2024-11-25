@@ -1,0 +1,374 @@
+1. Data types in JS:
+ 1. Number 2. Boolean 3. String 4. Undefined 5.Null 6.BigInt 7.Symbol
+
+# *****************JavaScript part - 5 ************
+1. Object of Objects: Storing information of multiple students.
+const classInfo = {
+            aman : {
+                grade: "A+",
+                city: "Delhi"
+            },
+
+            shradha: {
+                grade: "A",
+                city: "Pune",
+            },
+
+            karna: {
+                grade: "0",
+                city: "Mumbai",
+            }
+        };
+
+2. Step 1: let num = Math.random();</h3>
+    <h3>Step2: num = num * 10;</h3>
+    <h3>Step3: num = Math.floor(num);</h3>
+    <h3>Step4: num = num + 1;</h3>
+    <h3>Final formula: Math.floor(Math.random() * 10);</h3>
+    <script>
+        console.log(Math.floor(Math.random() * 10) + 1);
+        console.log(Math.floor(Math.random() * 10));
+        console.log(Math.floor(Math.random() * 10));
+        console.log(Math.floor(Math.random() * 10));
+        console.log(Math.floor(Math.random() * 10));
+    </script>
+    <script>
+        let step1 = Math.random();
+        console.log(step1);
+        let step2 = step1 * 10;
+        console.log(step2);
+        let step3 = Math.floor(step2);
+        console.log(step3);
+
+3. Functions in JS : Function definition(telling JS) 
+    Syntax: 1. function funcName() {
+                    //do something
+                }
+
+                example: function hello() {
+                    console.log("hello");
+                }
+
+            2.  function calling(Using the function)
+                funcName();
+
+                example: hello();
+
+4. Function with Arguments: Value we pass to the function.
+Syntax:  function funcName(arg1, arg22) {
+    //do something
+}
+
+5. Return : Return keyword is used to return some value from the function.
+ let us understand: (input) -> function(); ->output
+
+ Syntax: function funcName(arg1, arg2) {
+                    //do something
+                    return val;
+                }
+
+6. Scope: Scope determines the accessibility of variables, objects and functions from different parts of the code.
+    * Function
+    * Block
+    * Lexical
+
+    1. Function Scope: Variables defined inside a function are not accessible (visible) from outside the function.
+    2. Block Scope: variables declared inside a {} block cannot be accessed from outside the block.
+    <script>
+        let sum = 54; //Global Scope
+        function calSum(a, b){
+            let sum = a + b; //Function scope
+            console.log(sum); //scope variable
+        }
+
+        calSum(8, 90);
+        console.log(sum); //Global varible
+    </script>
+
+    <h3>2. Block Scope</h3>
+    <script>
+        { //Block scope
+            let a = 121;
+            const b = 45;
+            var c = 56; // block scope not work for var datatype
+        }
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    </script>
+
+    3. Lexical Scope: A variable defined outside a function can be accessible inside another function defined after the variable declaration.
+    The opposite is not true.
+
+    // read hoisting
+
+4. Function Expressions: 
+    const variable = function(arg1, arg2) {
+        // do or return  something
+    }
+
+    const sum = function(a, b){
+        return a + b;
+    }
+
+    sum(2, 3);
+
+
+5. Higher Order Functions: A function that does one or both: 1. Takes one or multiple function as arguments.   2. Returns a function.
+    function multipleGreet(func, n) {
+                for(let i=1; i<=n; i++) {
+                    func();
+                }
+            }
+
+            let greet = function() {
+                console.log("hello");
+            }
+
+            multipleGreet(greet, 2);
+
+
+# ******************* JS Part-7 *****************
+
+1. this keyword : "This" keyword refers to an object that is executing the current piece of code.
+    ex: const student = {
+        name: "shradha",
+        age: 23,
+        eng: 95,
+        math: 93,
+        phy: 97,
+        getAvg() {
+            let avg = (eng + math + phy)/3;
+            console.log(avg);
+        }
+    };
+
+2. try & catch: 
+    * The try statement allows you to define a block of code to be tested for errors while it is being executed.
+    * The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+    try{
+        console.log(a);
+    }
+    catch{
+        console.log("variable doesn't exist.");
+    }
+
+3. Arrow functions: 
+        const func = (arg1, arg2) => {function definition};
+
+4. Implicit return in arrow functions: const func = (arg1, arg2..) => ( value )
+    const mul = (a, b) => ( a * b )
+
+5. Set Timeout in JS</h1>
+    setTimeout(function, timeout);
+    <script>
+        console.log("hi there!");
+        setTimeout(() => { // callback function : It is a function which is used as an argument inside another function.
+            console.log("Apna College"); 
+        }, 4000);
+
+        console.log("Welcome to");
+    </script>
+
+6. Set Interval in Js: setInterval(function, timeout) This function is used to set a interval and it will call the function again and again after particular interval.
+    When you use clearInterval(id) it will stop its execution.
+    setInterval( () => {
+        console.log("hello")
+    }, 2000)
+
+7. this with arrow function: 
+        function : scope -> this ->calling object
+        arrow functions: Lexical scope -> parent ->call scope
+
+
+# **************************** JS Part 8 *****************************
+
+1. Array Methods: 
+    *forEach *map  *filter *some *every *reduce
+
+    1. forEach Method: arr.forEach(some function definition or name);
+        let arr = [1, 2, 3, 4, 5];
+        function print(el) {
+            console.log(el);
+        }
+
+        arr.forEach(print);
+        //Or
+
+        arr.forEach(function(el) {
+            console.log(el);
+        })
+
+    2. Map method: arr.map(some function definition or name);
+        let num = [1, 2, 3, 4];
+        let double = num.map(function(el) {
+            return el * 2;
+        });
+
+    3. Filter method: arr.filter(some function definition or name);
+        let nums = [2, 4, 1, 5, 6, 2, 7, 8, 9];
+        let even = nums.filter( (num) => (num %2 == 0));  //even -> true odd->false
+
+    4. Every: returs true if every element of array gives true for some function.Else return false.
+    array.every(some function definition or name);
+    [1, 2, 3, 4].every( (el) => (el % 2 == 0)); //output -> false
+    [2, 4].every( (el) => (el % 2 == 0)); //output ->true
+
+    5. Some: Returns true if some elements of array give true for some function.Else returns false.
+    arr.some(some function definition or function name);
+    [1, 2, 3, 4].some((el) => (el % 2 == 0));
+
+    6. Reduce: Reduce the array to  a single value
+    arr.reduce(reducer function with 2 variables for (accumulator, element));
+    [1, 2, 3, 4].reduce( (res, el) => {res + el});
+
+    7. Default Parameters: Giving a default value to the arguments.
+    function func(a, b=2) {
+        //do something
+    }
+
+    function sum(a, b=3) {
+        return a+b;
+    }
+    sum(2);
+
+    8. Spread: Expands an iterable into multiple values.
+        function func(arr) {
+            //do something
+        }
+
+        console.log(..."apnacollege");
+
+    9. Rest: Allows a function to take an indefinite number of arguments and bundle them in array.
+    ex: function sum(...args) {
+        return args.reduce((add, el) => add + el);
+    }
+
+    10. Destructuring: Storing values of array into multiple values.
+    let names = ["tony", "bruce", "steve", "peter"];
+    let[winner, runnerup] = names;
+    console.log(winner, runnerup); //"tony", "bruce"
+
+
+# *********************** JavaScript Part 9 *************************************/
+
+1. DOM (Document Object Model): The DOM represents a Document with a logical tree. It allows us to manipulate/change webpage content(HTML elements). 
+to print document object: console.dir(document);
+console.dir(document.all)
+console.dir(document.all[8])
+console.dir(document.all[8].innerHtml = "Peter Park");
+
+2. Selecting elements by Id:  (getElementById) Returns the element as an object or null(if not found).
+ex: document.getElementById("id");
+
+3. Selecting elements by className: (getElementByClassName) Returns the elements as an HTML collection or empty collection(if not found).
+ex: console.dir(document.getElementsByClassName("oldImg"));
+
+4. Selecting elements by tagName: (getElementByTagName) Returns the element as an HTML collection or empty collection (if not found).
+
+5. Query Selectors: Always us to use any css selector.
+ex: document.querySelector('p'); //selects first p element
+document.querySelectorAll('p'); //Selects all p elements
+document.querySelector('#myId'); //selects first element with id="myId"
+document.querySelector('.myClass'); //Selects first element with class="myClass"
+
+6. Setting content in objects: 
+    1. Using properties & Methods:
+    i. innerText  = shows the visible text contained in a node.
+    ii. textContent = shows all the full text.
+    iii. innerHtml = shows the full markup.
+
+7. Manipulating Attributes: 
+    obj.getAttribute(attr);
+    obj.setAttribute(attr, val);
+
+8. Manipulating Style : 
+    1.with style attributes: 
+        1. Use obj.style to get all css properties.
+        2. we can only set and access inline style by using style manipulation.
+        ex: let img = document.querySelector('img');
+        ex: img.style  //obj.style
+        console.dir(img.style);
+        heading.style.color = "red";
+
+        let links = document.querySelectorAll(".box a");
+        for(link of links) {
+            link.style.color="purple";
+        } //we can set only inline style by using style manipulation.
+
+
+    2. Using classList : //obj.classList
+        1. classList.add() to add new classes.
+        2. classList.remove() to remove classes.
+        3. classList.contains() to check if class exists.
+        4. classList.toggle() to toggle between add & remove.
+
+    3. Navigation on Page: 
+        1. parentElement
+        2. children
+        3. previousElementSibling/ nextElementSibling
+        ex: let h4 = document.querySelector("h4");
+        console.log(h4.parentElement)
+        console.log(h4.children)
+        let h4 = document.querySelector("h4");
+        console.log(h4.parentElement)
+        console.log(h4.children)
+
+        let box = document.querySelector(".box");
+        console.log(box.children);
+        console.log(box.childElementCount)
+
+        let ul = document.querySelector("ul");
+        console.log(ul.children)
+        console.log(ul.children[0])
+        console.log(ul.children[1])
+        console.log(ul.children[2].previousElementSibling)
+
+        img = document.querySelector('img');
+        console.log(img.previousElementSibling)
+        img.previousElementSibling.style
+        img.previousElementSibling.style.color = "green";
+
+
+    4. Adding Elements on page: document.createElement('p')
+    * appendChild(element) // we can only make changes in child of a parent element. 
+    * append(element) /string/text(add text at last)
+    * prepend(element) (add text at first)
+    * insertAdjacent(where, element) //Refer mdn docs for it
+
+    5. Removing Elements: 
+    *removeChild(element)
+    *remove(element) ex: p.remove(); 
+
+# ************************** JS Part 10 *******************************/
+
+1. DOM Events: Events are signals that something has occurred. (user inputs/ actions).
+2. Mouse/Pointer Events: 
+    onclick(when an element is clicked).
+    onmouseenter(when mouse enters an element.)
+3. Event Listener: 
+    i. addEventListener
+        element.addEventListener(event, callback)
+        btn.addEventListener("click", function() {
+            console.log("button clicked);
+        })
+    //Refer mdn docs for events of mouse keyboard and so many other events.
+
+4. this in event listeners: when 'this' is used in a callback of event handler of something, it refers to that something.
+
+5. Keyboard events: Keyup, keydown, keypress //Refer mdn keyboard events.
+    1.key 2.Code
+     input.addEventListener("keydown", function(event) {
+            console.log(event.key);
+            console.log(event.code);
+            console.log("key pressed");
+        })
+
+6. More events: 
+    1. change event: The change event occurs when the value of an element has been changed. (only work on <input>, <textarea> and <select> elements).
+    2. input event: The input event fires when the value of an <input>, <select>, or <textarea> element has been changed.
+
+
+# ************************** JavaScript Part 11 ***********************************/
+1. Event Bubbling: 

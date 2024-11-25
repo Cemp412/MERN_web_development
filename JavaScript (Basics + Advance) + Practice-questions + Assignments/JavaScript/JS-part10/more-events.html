@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action">
+        <input type="text" name="username" id="user">
+        <input type="text" name="password" id="pass">
+        <button>Register</button>
+    </form>
+    <p></p>
+    
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+        })
+
+        let user = document.querySelector("#user");
+        user.addEventListener("change", function() {
+            console.log("change event");
+            console.log("final value =", this.value);
+        })
+
+        let p = document.querySelector("p");
+        user.addEventListener("input", function() {
+            console.log("input event")
+            console.log(this.value);
+            p.innerText = this.value;
+        })
+    </script>
+</body>
+</html>

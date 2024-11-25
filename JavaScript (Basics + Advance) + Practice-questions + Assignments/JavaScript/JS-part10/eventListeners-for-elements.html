@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <div class="box"></div>
+
+    <script>
+        let box = document.querySelector(".box");
+        box.addEventListener("mouseenter", function() {
+            console.log("you have entered your mouse")
+        });
+
+        let p = document.querySelector("p");
+        p.addEventListener("click", function() {
+            console.log("Button was clicked");
+        })
+    </script>
+</body>
+</html>

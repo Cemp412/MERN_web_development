@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Keyboard Events in JS</h1>
+    <input type="text">
+    <button>click me!</button>
+    <script>
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", function(event) {
+            console.log(event);
+            console.log("button clicked!");
+        })
+
+        btn.addEventListener("dblclick", function(evt) {
+            console.log(evt);
+        })
+
+        let input = document.querySelector("input");
+        input.addEventListener("keydown", function(event) {
+            // console.log(event.key);
+            // console.log(event.code);
+            console.log("key pressed");
+
+            if(event.code == "ArrowUp") {
+                console.log("character moves forward.");
+            }
+            else if(event.code == "ArrowDown") {
+                console.log("character moves backward");
+            }
+            else if(event.code == "ArrowLeft") {
+                console.log("Character moves left");
+            }
+            else if(event.code == "ArrowRight") {
+                console.log("Character moves right");
+            }
+        })
+
+        input.addEventListener("keyup", function(event) {
+            // console.log(event.key);
+            // console.log(event.code);
+            console.log("Key released");
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Qs.1 For the given start state of an array, change it to final form using methods.
+        <br> start: ['january', 'july', 'march', 'august'];
+        <br> final: ['july', 'june', 'march', 'august'];
+    </h4>
+    <script>
+        let months = ['january', 'july', 'march', 'august'];
+        months.shift();
+        months.shift();
+        console.log(months);
+        months.unshift("june");
+        months.unshift("july");
+        console.log(months);
+    </script>
+</body>
+</html>

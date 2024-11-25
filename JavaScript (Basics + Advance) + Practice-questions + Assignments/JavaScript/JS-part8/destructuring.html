@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Destructuring</h3>
+    <script>
+        let names = ["tony", "bruce", "steve", "peter"];
+        let[winner, runnerup, ...other] = names;
+        console.log(winner, runnerup); //"tony", "bruce"
+    </script>
+
+    <h3>Destructuring in Objects</h3>
+    <script>
+        const students = {
+            name: "karan",
+            age: 14, 
+            class:9,
+            subjects: ["hindi", "english", "math"],
+            username: "karan123",
+            password: "12345@%",
+            city:"delhi"
+        }
+
+        let {username:user, password, city="Mumbai"} = students;
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method in JS</title>
+</head>
+<body>
+    <h1>String methods: </h1>
+    <ol type="1">
+        <li>str.trim();</li>
+        <script>
+            let msg = " Hello  ";
+            console.log(msg);
+            console.log(msg.trim());
+        </script>
+
+        <li>Strings are immutable in JS</li>
+        <script>
+            let x = "apna    ";
+            let str = x.trim();
+            console.log(x);
+            console.log(str);
+        </script>
+
+        <li>str.toUpperCase();   str.toLowerCase();</li>
+        <script>
+            console.log(str.toUpperCase());
+            console.log(str.toLowerCase());
+        </script>
+
+        <li>String methods with arguments</li>
+        <script>
+            str = "ILoveCoding";
+            console.log(str.indexOf("Love")); 
+            console.log(str.indexOf("love")); //case-sensitive
+            console.log(str.indexOf("o"));
+        </script>
+
+        <li>Method Chaining</li>
+        <script>
+            msg = "freelancer     ";
+            console.log(msg.toUpperCase().trim());
+        </script>
+
+        <li>slice</li>
+        <script>
+            msg = "I Love My India";
+            console.log(msg.slice(2));
+            console.log(msg.slice(2, 7));
+            console.log(msg.slice(-1));  //15-1 = 14 //output: last index value:a;
+        </script>
+
+        <li>replace</li>
+        <script>
+            str="ILoveCoding";
+            console.log(str.replace("Love", "Do"));
+            console.log(str.replace("o", "x"));
+        </script>
+
+        <li>repeat</li>
+        <script>
+            str="Mango";
+            console.log(str.repeat(3));
+        </script>
+     </ol>
+</body>
+</html>

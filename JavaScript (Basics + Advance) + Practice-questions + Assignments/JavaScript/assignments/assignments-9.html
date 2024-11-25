@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .purple{
+            color: purple;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h3>Qs1. Create a new input and button element on the page using JavaScript only. Set the text of button to "click me".</h3>
+    <script>
+        let body = document.querySelector("body");
+        let input = document.createElement("input");
+        let button = document.createElement("button")
+        button.innerText = "Click me!"
+        body.append(input)
+        body.append(button)
+    </script>
+
+    <h3>Qs2. Add following attributes to the element: 
+        <br> <p>-change placeholder value of input to "username"</p>
+        <br> <p>-change id of button to btn</p>
+    </h3>
+    <script>
+        input.setAttribute("placeholder", "username");
+        button.setAttribute("id", "btn");
+    </script>
+
+    <h3>Qs3. Access the btn using the querySelector and button id. Change the background color to the blue and text color to white.</h3>
+    <script>
+      let btn1 = document.querySelector("button");
+      let id = document.querySelector("#btn")
+      btn1.style.color = "white";
+      btn1.style.backgroundColor = "blue";
+    </script>
+
+    <h3>Qs4. Create an h1 element on the page and set its text to “DOMPractice” underlined.Change its color to purple. </h3>
+    <script>
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "DOM Practice";
+        body.append(h1);
+        h1.classList.add("purple");
+    </script>
+
+    <h3>Qs5. Create a p tag on the page and set its text to "Apna College Delta Practice", where Delta is bold.</h3>
+    <script>
+        let p = document.createElement("p");
+        p.innerHTML = `Apna College <b>Delta</b> Practice`;
+        body.append(p);
+    </script>
+</body>
+</html>

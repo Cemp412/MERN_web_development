@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow functions in JS</h1>
+    <script>
+        const sum = (a, b) => {
+            console.log(a + b);
+        }
+
+        sum(2, 3);
+
+        const cube = n => {
+            return n * n * n;
+        }
+
+        console.log(cube(4));
+
+        const pow = (a, b) => {
+            return a ** b;
+        }
+    </script>
+
+    <h3>2. Implicit return in arrow functions.</h3>
+    <script>
+        const mul = (a, b) => ( a* b);
+        console.log(mul(3, 6));
+
+        const diff = (a, b) => a - b;
+        console.log(diff(8, 4));
+    </script>
+</body>
+</html>

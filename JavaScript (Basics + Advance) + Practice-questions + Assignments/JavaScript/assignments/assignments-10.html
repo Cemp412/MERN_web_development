@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h3>Qs1. Try out the following events in Event Listener on your own:
+        <br> 
+        <ul>
+            <li>mouseout</li>
+            <li>keypress</li>
+            <li>scroll</li>
+            <li>load</li>
+        </ul>
+    </h3>
+
+    <script>
+        let ul = document.querySelector("ul");
+        ul.addEventListener("mouseout", function() {
+            console.log("mouse out");
+        })
+
+        document.addEventListener("keypress", function() {
+            console.log("key was pressed");
+        })
+
+        document.addEventListener("scroll", function() {
+            console.dir(this);
+            console.log("you are scrolling on window");
+        })
+
+        window.addEventListener("load", function() {
+            console.log("page is fully loaded");
+        })
+    </script>
+
+    <h3>Qs2. Create a button on the page using Javascript. Add an event listener to the button that changes the button's color to green when it is clicked.</h3>
+    <script>
+        let btn = document.createElement("button");
+        let body = document.querySelector("body");
+        body.append(btn);
+        console.dir(btn);
+        btn.innerText = "click me";
+        btn.addEventListener("click", function() {
+            btn.style.color = "green";
+        })
+    </script>
+
+    <h3>Qs3. Create an input element on the page with a placeholder "enter your name" and an H2 heading on the page inside HTML.
+        <br>
+        The purpose of this input element is to enter a user's name so it should only input letters from a-z, A-Z, and space (all other characters should not be detected).
+        Whenever the user inputs their name, their input should be dynamically visible inside the heading.
+        [Please note that no other character apart from the allowed charcters should be visible in the heading].
+    </h3>
+    <script>
+        let input = document.createElement("input");
+        let h2 = document.createElement("h2");
+        h2.innerText = "Hi, I am Peter jerk."
+        body.append(h2);
+        body.append(input);
+        input.setAttribute("placeholder", "enter your name")
+        input.setAttribute("name", "username")
+
+        // Create and append h2 element
+        const heading = document.createElement("h2");
+        heading.textContent = "Your name will appear here";
+        body.appendChild(heading);
+        heading.style.color = "#333";
+
+        //add input event listener
+        input.addEventListener("input", () => {
+            const filteredvalue = input.value.replace(/[^a-zA-Z ]/g, "");
+            input.value = filteredvalue;
+            heading.textContent = filteredvalue
+        })
+
+    </script>
+</body>
+</html>

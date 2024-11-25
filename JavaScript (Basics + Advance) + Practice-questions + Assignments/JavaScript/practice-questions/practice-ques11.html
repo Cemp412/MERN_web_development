@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Qs.1 For the given start state of an array, change it to final form using splice.
+        <br>
+        start: ['january', 'july', 'march', 'august'];
+        <br>
+        final: ['july', 'june', 'march', 'august'];
+    </h5>
+    <script>
+        let start = ['january', 'july', 'march', 'august'];
+        // start.splice(0,2);
+        // console.log(start);
+        start.splice(0, 2, 'july', 'june');
+        console.log(start);
+    </script>
+
+    <h5>
+        Return the index of the "javascript" from the given array, if it was reversed.
+        <br>
+        ['c', 'c++', 'html', 'javascript', 'python', 'java', 'c#', 'sql'];
+    </h5>
+    <script>
+        let arr = ['c', 'c++', 'html', 'javascript', 'python', 'java', 'c#', 'sql'];
+        // arr.reverse();
+        // console.log(arr);
+        console.log(arr.reverse().indexOf("javascript"));
+    </script>
+
+    
+</body>
+</html>

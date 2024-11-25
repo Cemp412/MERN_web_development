@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Set Interval in JS</h1>
+    <p>
+        setInterval(function, timeout) This function is used to set a interval and it will call the function again and again after particular interval.
+        When you use clearInterval(id) it will stop its execution.
+        setInterval( () => {
+            console.log("hello")
+        }, 2000)
+    </p>
+    <script>
+        console.log("Hi")
+        let id = setInterval(() => {
+            console.log("there");
+        }, 2000)
+
+        console.log("Come back");
+        console.log(id);
+        clearInterval(id);
+    </script>
+</body>
+</html>

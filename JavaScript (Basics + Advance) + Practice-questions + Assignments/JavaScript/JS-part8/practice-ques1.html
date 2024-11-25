@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Qs1. Check if all numbers in our array are multiples of 10 or not.</h3>
+    <script>
+        let nums = [10, 20, 30, 40, 50];
+        let isMultiple = nums.every((n) => n%2 == 0 );
+        console.log(isMultiple);
+    </script>
+
+    <h3>Qs2. Create a function to find min number in an array.</h3>
+    <script>
+        let arr = [130, 15, 77, 232, 7, 9, 22];
+        let minValue = arr.reduce( (min, el) => {
+            if(el < min) {
+                return el;
+            }
+            else{
+                return min;
+            }
+        })
+        console.log(minValue);
+    </script>
+</body>
+</html>

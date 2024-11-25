@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in  JS</title>
+</head>
+<body>
+    <h1>Arrays in JS</h1>
+    <script>
+        let nums=[2, 4, 6, 9, 0];
+        console.log(typeof(nums));
+        console.log(nums[1]);
+    </script>
+
+    <ol type="1">
+        <li>Visualizing Arrays</li>
+        <script>
+            let marks = [99, 89, 67, 56, 60];
+            console.log(marks)
+        </script>
+
+        <li>Creating Arrays</li>
+        <script>
+            marks = [99, 89, 93, 76, 62];
+            let names = ["adam", "bob", "catlyn"];
+            let info = ["aman", 35, 6.1]; //mixed array
+            let newArr = []; //empty array
+
+            console.log(marks.length);
+            console.log(newArr);
+            console.log(newArr.length);
+            console.log(info[0]);
+            console.log(info[0][0]);
+        </script>
+
+        <li>Arrays are mutable</li>
+        <script>
+            let fruits = ['apple', 'mango', 'litchi'];
+            fruits[0] = 'banana';
+            console.log(fruits);
+            fruits[10] = "papaya";
+            console.log(fruits);
+        </script>
+
+        <li>Array methods</li>
+        <script>
+            let cars = ["audi", "bmw", "xuv", "maruti"];
+            console.log(cars);
+            cars.push("toyota"); //added element after last index of array
+            console.log(cars);
+            cars.pop(); //removes last element from array
+            console.log(cars);
+            cars.unshift("ferrari"); //shifts the first element and added element at intial index of array.
+            console.log(cars);
+            cars.shift(); //removes element from first index of array
+            console.log(cars);
+
+            let followers = ['a', 'b', 'c'];
+            let blocked = followers.shift();
+            console.log(followers);
+            console.log(blocked);
+        </script>
+
+        <li>indexOf & includes Method</li>
+        <script>
+            let primary = ['red', 'yellow', "blue"];
+            //indexOf
+            console.log(primary.indexOf('blue'));
+            console.log(primary.indexOf("Yellow"));
+            console.log(primary.indexOf("red"));
+
+            //includes
+            console.log(primary.includes("yellow"));
+            console.log(primary.includes("Yellow"));
+            console.log(primary.includes("red"));
+        </script>
+
+        <li>concat (concatenate) & reverse</li>
+        <script>
+            primary = ["red", "yellow", "blue"];
+            let secondary = ["orange", "green", "violet"];
+
+            console.log(primary.concat(secondary));
+            console.log(secondary.reverse);
+        </script>
+        
+        <li>slice method</li>
+        <!-- <script>
+            cars = ["audi", "bmw", "xuv", "maruti"];
+            console.log(cars.slice());
+            console.log(cars.slice(1));
+            console.log(cars.slice(1, 3));
+            console.log(cars.slice(3));
+            console.log(cars.slice(-1));
+            console.log(cars.slice(-2));
+        </script> -->
+
+        <li>splice method</li>
+        <script>
+            cars=["audi", "bmw", "xuv", "maruti"];
+            console.log(cars);
+            console.log(cars.splice(3));
+            console.log(cars);
+            cars.push("ferrari", "rolls-royce");
+            console.log(cars);
+            console.log(cars.splice(1, 2)); //cars.splice(start, deletecount, item1, item2)
+            cars.splice(0, 0, "Mercities", "Kia");
+            console.log(cars);
+            cars.splice(1, 0, "gwagon");
+            console.log(cars);
+        </script>
+
+        <li>sort: sorts an array</li>
+        <script>
+            let days = ["monday", "sunday", "wednesday", "tuesday"];
+            console.log(days.sort());
+            let squares = [25, 16, 4, 49, 36, 9];
+            console.log(squares.sort());
+            let chars = ['b', 'd', 'a', 'g', 'c'];
+            console.log(chars);
+            console.log(chars.sort());
+        </script>
+
+        <li>Arrays Reference (Reference -> refers to the address of the variable).</li>
+        <script>
+            console.log("name" === "name");
+            // [1] === [1]; //check them in console one by one
+            // [1] == [1];
+            // [] == [];
+            // "" == "";
+            let arr = ["a", "b", "c", "d"];
+            let arrCopy = arr;
+            console.log(arrCopy === arr);
+        </script>
+
+        <li>Constant Arrays (we can perform operations on constant array values but can not convert it into totally new array).</li>
+        <script>
+            const arrs = ['1', '2', '3', '4'];
+            arrs.pop();
+            console.log(arrs);
+            arrs = ["1", "2", "3"]; //this step will gives you error because you can not convert a array into whole new one.
+        </script>
+
+        <li>Nested Arrays</li>
+            <table border="1">
+                <caption>Nested array presentation</caption>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+
+                <tr>
+                    <td>0</td>
+                    <td>9</td>
+                </tr>
+            </table>
+        <script>
+            let nestedarr = [[1,2], [3, 4], [4, 5], [0,9]]; //rows = no. of total elements in array //column = no.of element in individual array.
+            console.log(nestedarr[0]);
+            console.log(nestedarr[0].length);
+            console.log(nestedarr[0][0]);
+            console.log(nestedarr.length);
+        </script>
+    </ol>
+</body>
+</html>

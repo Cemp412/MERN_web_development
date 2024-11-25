@@ -1,0 +1,36 @@
+<script>
+    let arr = [1, 2, 3, 4, 5, 6];
+    let print = function(el) {
+        console.log(el);
+    }
+
+    arr.forEach(print);
+
+    //OR
+
+    arr.forEach(function(el) {
+        console.log(el);
+    })
+
+
+    //Use arr. forEach for array of objects
+    let array = [
+        {
+            name: "amir",
+            marks: 78
+        },
+        {
+            name: "anamika",
+            marks: 90
+        },
+        {
+            name:"sanmy",
+            marks:89
+        }
+    ];
+
+    array.forEach((student) => {
+        console.log(student);
+        console.log(student.marks);
+    }) 
+</script>

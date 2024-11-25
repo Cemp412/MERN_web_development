@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Qs1. Write an arrow function that returns the square of a number 'n'.</h1>
+    <script>
+        const square = (n) => {
+            return n * n;
+        }
+        console.log(square(5));
+    </script>
+    <h3>Qs2. Write a function that prints "Hello World" 5 times at interval of 2s each.</h3>
+    <script>
+       
+        let id = setInterval(() => {
+            
+                console.log("Hello World");
+            }, 2000);
+
+        setTimeout( () => {
+            clearInterval(id);
+        }, 10000);
+    </script>
+</body>
+</html>

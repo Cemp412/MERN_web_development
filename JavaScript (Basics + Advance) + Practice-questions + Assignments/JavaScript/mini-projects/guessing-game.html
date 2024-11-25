@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game in JS</title>
+</head>
+<body>
+    <h1>Qs. User enters a max number & then tries to guess a random generated number between 1 to max.</h1>
+    <script>
+        let max = prompt("Enter the maximum range to generate random number in between.");
+        let num = Math.floor(Math.random()*  max ) + 1;
+        let guess = prompt("guess the number?");
+        while(true) {
+            if(guess == "quit") {
+                alert("You have choose to close the game.");
+                break;
+            }
+            else if(guess == num) {
+                alert("Congrats!! You won the game.");
+                break;
+            }
+            else if(guess < num) {
+                guess = prompt("Hint: Your number was too small. Please try again");
+            }
+            else if(guess > num) {
+                guess = prompt("Hint: Your number was too large. Please try again");
+            }
+            // else{
+            //     guess = prompt("Wrong guess. Please try again.");
+            //     console.log(num);
+            // }
+            
+        }
+        console.log(num);
+    </script>
+</body>
+</html>

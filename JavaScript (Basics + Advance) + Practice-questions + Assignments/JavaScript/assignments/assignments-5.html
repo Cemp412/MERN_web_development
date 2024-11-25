@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Qs1. Create a program that generates random number representing a dice-roll.</h3>
+    <script>
+        console.log(Math.floor(Math.random() * 6) + 1);
+    </script>
+
+    <h3>Qs2. Create an object representing  a car that stores the following properties for the car: name, color, model.</h3>
+    <script>
+        let car = {
+            name: "Rolls Royce",
+            color: "red",
+            model: "Ghost"
+        }
+
+        console.log(car.name);
+    </script>
+
+    <h3>Qs3. Create an Object Person with their name, age and city. Edit their city's original value change it to "New York".</h3>
+    <script>
+        let person = {
+            name: "Abhay",
+            age: "23",
+            city: "Mumbai"
+        };
+
+        console.log(person);
+        person.city = "New York";
+        console.log(person["city"]);
+
+    </script>
+</body>
+</html>

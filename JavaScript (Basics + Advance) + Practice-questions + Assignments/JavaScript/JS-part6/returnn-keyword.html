@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Return Keyword in JS</h1>
+    <p>
+        Return : Return keyword is used to return some value from the function.
+        let us understand: (input) -> function(); ->output
+
+        Syntax: function funcName(arg1, arg2) {
+                            //do something
+                            return val;
+                        }
+    </p>
+    <script>
+        function sum(a, b){
+            return a+b;
+        }
+
+        let result = sum(8, 10);
+        console.log(result);
+
+        result = sum(sum(7, 8), 10);
+        console.log(result);
+
+        function isAdult(){
+            let age = 18;
+            if(age >= 18) {
+                return "adult";
+            }
+            else{
+                return "You are not adult";
+            }
+        }
+       console.log(isAdult());
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 in JS</title>
+</head>
+<body>
+    <h5>Qs.1 Create a number variable num with some value. Now, print "good" if the number is divisible by 10 and print "bad" if it is not.</h5>
+    <script>
+        num = 20;
+        if(num%10 == 0) {
+            console.log("good");
+        }
+        else{
+            console.log("bad");
+        }
+    </script>
+
+    <h5>Qs.2 Take the user's name & age as input using prompts. Then return back the following statement to the user as an alert (by subsituting their name & age) : name is age years old.
+        <br> [Use template literals to print this sentence.]
+    </h5>
+    <script>
+        // let name = prompt("Enter your name?");
+        // let age = prompt("Enter your age?");
+        // alert(`${name} is ${age} years old.`);
+    </script>
+
+    <h5>Qs3. Write a switch statement to prints the months in a quarter.
+        <ul>
+            <li>Months in Quarter 1: January, February, March</li>
+            <li>Months in Quarter 2: April, May, June</li>
+            <li>Months in Quarter 3: July, August, September</li>
+            <li>Months in Quarter 4: October, November, December</li>
+        </ul>
+    </h5>
+    <script>
+        let quarter = 2;
+        switch (quarter) {
+            case 1:
+                console.log("Months in Quarter 1: January, February, March");
+                break;
+            case 2: 
+                console.log("Months in Quarter 2: April, May, June");
+                break;
+            case 3: 
+                console.log("Months in Quarter 3: July, August, September");
+                break;
+            case 4:
+                console.log("Months in Quarter 4: October, November, December");
+                break;
+            default:
+                console.log("Enter valid quarter value");
+                break;
+        }
+    </script>
+
+    <h5>Qs4. A string is a golden string if starts with the character 'A' or 'a' and has a total length greater than 5. For a given string print if it is golden or not.</h5>
+    <script>
+        let str = "Base of a ball";
+        if(str[0] === 'A' || str[0] === 'a') {
+            console.log("It is a golden string");
+        }
+        else{
+            console.log("It is not a golden string");
+        }
+    </script>
+
+    <h5>Qs5. Write a program to find largest of three numbers?</h5>
+    <script>
+        let a = 12, b = 16 , c=40;
+        console.log(`value of a: ${a}, b:${b}, c:${c}`);
+        if(a > b && a > c) {
+            console.log("a is largest number");
+        }
+        else if(b > a && b > c) {
+            console.log("b is largest number");
+        }
+        else{
+            console.log("c is the largest number");
+        }
+    </script>
+
+    <h5>Qs6. Write a program to check if 2 numbers have the same last digit.</h5>
+    <script>
+        let num1 = 32;
+        let num2 = 47852;
+
+        if((num1 % 10) == (num2 % 10)) {
+            console.log("numbers have the same last didgit which is num1%10");
+        }
+        else{
+            console.log("numbers don't have the same last digit");
+        }
+    </script>
+</body>
+</html>
