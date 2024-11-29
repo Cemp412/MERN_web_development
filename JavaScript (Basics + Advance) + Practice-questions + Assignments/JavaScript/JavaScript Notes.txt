@@ -21,7 +21,7 @@ const classInfo = {
         };
 
 2. Step 1: let num = Math.random();</h3>
-    <h3>Step2: num = num * 10;</h3>
+    <h3>Step2: num = num * a10;</h3>
     <h3>Step3: num = Math.floor(num);</h3>
     <h3>Step4: num = num + 1;</h3>
     <h3>Final formula: Math.floor(Math.random() * 10);</h3>
@@ -372,3 +372,155 @@ document.querySelector('.myClass'); //Selects first element with class="myClass"
 
 # ************************** JavaScript Part 11 ***********************************/
 1. Event Bubbling: 
+
+# *************************  JavaScript Part 11 ********************************/
+
+1. Call Stack: It is similar to the stack follows LIFO(Last In First Out) sequence.
+    *Stack me function ki call store hoge also known as stack frame.
+
+2. Visualizing the call stack:
+3. Breakpoints:
+4. JS is single threaded language.
+    i. Synchronous nature: Execute code sequentially.
+    ii. Asynchronous nature: Executes code but not necessarily in sequence.
+5. Callback hell
+6. Promises: the Promise object represents the eventual completion (or failure) of an Asynchronous operation and its resulting value.
+synatax: new Promise(resolve, reject);
+7. Refactoring with Promises:
+8. then() and catch() methods:
+9. Promise chaining:
+10. Results and errors in promises: Promises are rejected and resolved with some data(valid results or errors)
+
+
+# ********************************* JavaScript Part 12 *******************************/
+1. Async functions: async & await keywords.
+    syntax: 
+    async function greet() {
+        return "hello world"; //returns a promise
+    } 
+
+    let hello = async () => {}; //returns a promise
+
+2. Await keyword: pauses the execution of its surrounding async function until the promise is settled. (resolved or rejected)
+    syntax:
+    async function show() {
+        await colorChange("violet", 1000);
+        await colorChange("indigo", 1000);
+        await colorChange("green", 1000);
+        await colorChange("yellow", 1000);
+        await colorChange("orange", 1000);
+
+        return "done";
+    }
+
+3. Handling rejections with await: using try -catch block.
+        async function demo2() {
+            try{
+                await changeColor("red", 1000);
+                await changeColor("blue", 1000);
+                await changeColor("yellow", 1000);
+                changeColor("green", 1000);
+
+                let a = 5;
+                console.log(a);
+                console.log("new number: " , a + 3)
+            }
+            catch(err) {
+                console.log("error caught");
+                console.log(err);
+            }     
+        }
+
+4. Qs. What is API?
+ans. API stands for Application Programming Interface.
+1. APIs that interacts with the server to fetch requested data are called web API's.
+2. APIs returns data in JSON format.
+3. API: Some random API -> 
+    https://catfact.ninja/fact (send random cat facts)
+    https://www.boredapi.com/api/activity (sends an activity to do when bored).
+    https://dog.ceo/api/breeds/image/random (sends cute dog pictures)
+4. Accessing some APIs
+5. Qs. What is JSON?
+ans. JSON stands for Javascript Object Notation www.json.org
+    1. JSON validators : There are so many json validator websites. It helps us to know whether your code is right or not. https://jsonlint.com
+
+6. Accessing JSON data: Accessing Data from JSON
+    * JSON.parse(data) Method : to parse a string data into JS object.
+    * JSON.stringify(json) Method: To parse a js object data into JSON.
+
+7. Testing API requests: Tools-> Hoppscoth (online tool), Postman.
+8. Qs. What is Ajax?
+ans. Asynchronous JavaScript and XML.
+
+9. Http Verbs: examples -> GET, POST, DELETE
+10. Status Codes: examples -> *200 -> OK, *404 -> not found, *400 -> Bad request, *500 -> Internal Server Error
+    //Refer mdn http error responses.
+
+11. Add information in URLs: //Query string [ex-> https://www.google.com/search?q=harry+porter]
+    ?name=shradha+kedia&marks=90
+    ex: url/:id, url/{{id}}, url/<id>
+
+12. Http headers:
+13. Our first API request:
+     //Another way
+        fetch(url)
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        })
+        .then((data) => {
+                console.log("data1 :", data.fact);
+                return fetch(url);
+            })
+        .then((res) => {
+            return res.json();
+        })
+        .then( (data2) => {
+            console.log("data2 = ", data2.fact);
+        })
+        .catch((err) => {
+            console.log("error -", err);
+        })
+
+        console.log("I am happy");
+
+14. Using fetch with async and await: 
+    async function getFacts() {
+        try{
+            res1 = await fetch(url);
+            let data1 = await res1.json();
+            console.log("data1 :", data1);
+
+            let res2 = await fetch(url);
+            let data2 = await res2.json();
+            console.log("data2 -", data2);
+        }
+        catch(e) {
+            console.log("error:", e);
+        }
+    }
+
+
+# ************************** JavaScript Part 13 ************************************/
+
+1. Using Axios: Library to make http requests.
+    async function getFacts() {
+        try{
+            let res =  await axios.get(url);
+            console.log(res);
+        }
+        catch(e) {
+            console.log("Error -", e);
+        }
+    }
+
+    //For more information: we can go to "axios github"
+    * we can install axios library from here.
+    * or we can use cdn link from here.
+
+2. Axios (sending headers): 
+    const config = {headers: {Accept: "application/json"}};
+    let res = await axios.get(url2, config);
+    console.log(res.data);
+
+    *** Hw problem: let create a project in which country name="India" sp people can list colleges according to their state province.
