@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result & Errors in JS</title>
+</head>
+<body>
+    <script>
+        function saveToDbPromise(data) {
+            return new Promise((resolve, reject) => {
+                let internetSpeed = Math.floor(Math.random() * 10) + 1;
+                if(internetSpeed > 4) {
+                    resolve("success: data3 was saved :", data);    
+                }
+                else{
+                    reject("failure: weak connection. Data not saved.");
+                }
+            });
+        }
+
+        saveToDbPromise("apna college")
+        .then((result) => {
+            console.log("Promise resolved");
+            console.log("result of promise: ", result);
+            return saveToDbPromise("hello world");
+        })
+        .then((result) => {
+            console.log("promise2 resolved");
+            console.log("result of promise2: ", result);
+            return saveToDbPromise("my notes");
+        })
+        .then((result) => {
+            console.log("promise3 resolved");
+            console.log("result of promise3: ", result);
+        })
+        .catch((error) => {
+            console.log("some promise rejected")
+            console.log("error of promise: ", error);
+        })
+    </script>
+</body>
+</html>

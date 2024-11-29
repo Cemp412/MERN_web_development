@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in JS</title>
+</head>
+<body>
+    <script>
+        function saveToDb(data, success, failure) {
+            let internetSpeed = Math.floor(Math.random() * 10) + 1;
+            if(internetSpeed > 4) {
+                success(data);
+            }
+            else{
+                failure();
+            }
+        }
+
+        saveToDb("apna college", 
+            (data) => {
+                console.log("success: data was saved :", data);
+                saveToDb("hello world", 
+                    (data) => { //asynchronous situation using callback hell
+                        console.log("success2: data2 was saved :", data);
+                        saveToDb("my ways", 
+                            (data) => {
+                                console.log("success3: data3 was saved :", data);
+                            },
+                            () => {
+                                console.log("failure3: weak connection. Data not saved.");
+                            }
+                        )
+                    },
+                    () => {
+                        console.log("failure2: weak connection. Data not saved.");
+                    }
+                )
+            },
+            () => {
+                console.log("failure: weak connection. Data not saved.");
+            }
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback hell in JS</title>
+</head>
+<body>
+    <h1>Apna College</h1>
+    <script>
+        let h1 = document.querySelector("h1");
+
+        function changeColor(color, delay, nextColorChange) {
+            setTimeout(() => {
+                h1.style.color = color;
+                if(nextColorChange) nextColorChange();
+            }, delay)
+        }
+
+        /* setTimeout(() => {
+            h1.style.color = "red";
+        }, 1000);
+
+        setTimeout(() => {
+            h1.style.color = "orange";
+        }, 2000);
+
+        setTimeout(() => {
+            h1.style.color = "green";
+        }, 3000); */
+
+        //We can written above code like this:
+        changeColor("red", 1000, () => {
+            changeColor("brown", 1000, () => {
+                changeColor("green", 1000);
+            });
+        });
+        
+    </script>
+</body>
+</html>

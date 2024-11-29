@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jsonRes = '{"fact": "Approximately 1/3 of cats owners think thier pet are able to read their minds.", "length":"78"}';
+        console.log(jsonRes);
+        // console.log(jsonRes.fact); //It gives error 
+
+        //So we will convert it into valid json format
+        let validJson = JSON.parse(jsonRes);
+        console.log(validJson);
+        console.log(validJson.fact);
+
+        let student = {
+            "name": "Abhay raj",
+            "marks": 89,
+            "Sub": "Math"
+        }
+
+        let stringfyData = JSON.stringify(student); 
+        console.log(stringfyData);
+    </script>
+</body>
+</html>

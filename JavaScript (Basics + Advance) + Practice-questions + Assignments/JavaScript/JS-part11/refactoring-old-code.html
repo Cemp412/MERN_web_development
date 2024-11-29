@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Refactoring callback hell code</h2>
+    <h1>Apna College</h1>
+    <script>
+        let h1 = document.querySelector("h1");
+
+        function changeColor(color, delay) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    h1.style.color = color;
+                    resolve("color changed!");
+                }, delay)
+            })
+        }
+
+       
+        changeColor("red", 1000)
+        .then(()  => {
+            console.log("Color was changed to red.")
+           return changeColor("brown", 1000)
+            .then( () => {
+                console.log("Color was changed to brown.")
+               return changeColor("green", 1000)
+               .then( () => {
+                    console.log("Color was changed to green.")
+                })
+            })
+        });
+        
+    </script>  
+</body>
+</html>

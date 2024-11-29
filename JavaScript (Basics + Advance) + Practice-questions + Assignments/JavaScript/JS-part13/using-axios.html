@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get random cat facts.</h1>
+    <button>Show new fact</button>
+    <p id="fact"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", async () =>  {
+            console.log("button was clicked.");
+            let facts = await getFacts();
+            let p = document.querySelector("#fact");
+            p.innerText = facts;
+        })
+        let url = "https://catfact.ninja/fact";
+        async function getFacts() {
+            try{
+                res1 = await axios.get(url);
+                console.log(res1);
+                return res1.data.fact;
+            }
+            catch(e) {
+                console.log("error:", e);
+            }
+        }
+
+        // getFacts();
+    </script>
+</body>
+</html>

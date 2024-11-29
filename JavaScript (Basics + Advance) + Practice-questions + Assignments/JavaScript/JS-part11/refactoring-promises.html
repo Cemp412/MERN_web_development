@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactoring Promises in JS</title>
+</head>
+<body>
+    <script>
+        function saveToDb(data) {
+            return new Promise((resolve, reject) => {
+                let internetSpeed = Math.floor(Math.random() * 10) + 1;
+                if(internetSpeed > 4) {
+                    resolve("success: data3 was saved :", data);    
+                }
+                else{
+                    reject("failure: weak connection. Data not saved.");
+                }
+            });
+        }
+
+        saveToDb("apna college");
+    </script>
+</body>
+</html>

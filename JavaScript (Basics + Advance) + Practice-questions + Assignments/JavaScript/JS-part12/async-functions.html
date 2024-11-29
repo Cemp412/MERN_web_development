@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async functions</title>
+</head>
+<body>
+    <h1>async & await keyword</h1>
+    <script>
+        async function greet() {
+            // throw "some random error";
+            return "hello world"; //returns a promise
+        } 
+
+        greet()
+        .then((result) => {
+            console.log("promise was resolved");
+            console.log("result was :", result);
+        })
+        .catch((error) => {
+            console.error("promise was rejected: ", error);
+        })
+
+        //arrow function to async function
+        let demo = async () => {
+            return 5;
+        }
+    </script>
+</body>
+</html>
