@@ -524,3 +524,58 @@ ans. Asynchronous JavaScript and XML.
     console.log(res.data);
 
     *** Hw problem: let create a project in which country name="India" sp people can list colleges according to their state province.
+
+
+
+
+
+/******************* Terminal *********************************/
+
+1. Terminal: A text input and output environment.
+2. Different terms related to Terminal: 
+    1. Command line: Any interface that is used by entering textual commands(gen. Windows centric)
+    2. Terminal : This is a type of Command line. (gen. Mac centric)
+    3. Console: A command line interface used to work with your computer.
+    4. Shell: A program running or terminal.
+    5. Bash: A popular shell on Mac OS/Linux.
+    6. Z-shell: Another shell (default)
+
+3. Basic commands : 1. ls -> list files (show my files)
+                    2. pwd -> print working directory (where am I?)
+                    3. clear -> clear screen
+                    4. ~ -> home directory
+
+4. Navigation : Inside & outside directories.
+    cd = change directory
+    cd Desktop (any next folder name)
+    cd .. = back button
+    cd ../.. = together two steps back
+
+5. Paths (Absolute & Relative) : 
+    cd Desktop/Delta (relative path)
+    cd/Users/Amit/Desktop (absolute path)
+    / = root directory
+    ~ = home directory
+
+6. Making directories:  mkdir = make directory
+
+7. Flags: Flags are charcters tha we pass with commands to modify their behaviour.
+    manual Command: 
+    man ls - give info about ls command.
+    man mkdir - give info about mkdir command.
+    with Flags - 
+        ls -l
+        ls -a
+        ls -la
+
+8. Touch command: used to create files.
+    touch index.HTML
+    touch app.js
+    touch app.txt
+
+9. Deleting files & folders: 
+        rm = remove files.
+        rmdir = removes empty folders
+        rm -rf = removes any folders
+
+

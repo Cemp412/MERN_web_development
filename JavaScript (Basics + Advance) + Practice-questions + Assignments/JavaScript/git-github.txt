@@ -1,0 +1,66 @@
+
+# **************************** GIT & GITHUB **********************************/
+Q1. What is Git?
+ans. Free & open source version control system.
+        tools that help to track changes in code.
+        1. track history
+        2. help to collaborate
+
+Q2. What is Github?
+ans. websites where we host repositories online.
+
+3. Readme.md -> md stands for markdown.
+
+4. Using Git: * Command line (Most popular)
+            * IDE/ Code editors (like VSCode)
+            * Graphical User Interface (like GitKraken)
+
+5. Configuring Git:  1. git config --global user.name "My Name"
+                     2. git config --global user.email "someone@mail.com"
+
+6. Basic Commands: 1. clone: cloning a repository on our local machine. Command: git clone <- some link ->
+                   2. status: displays the state of code. Command: git status
+                   3. add: adds new or changed files in your working directory to the Git staging area. Command: git add <- file name ->
+                   4. It is the record of change. command: git commit -m "some message"
+                   5. push: upload local repo content to remote repo. command: git push origin main
+
+                   6. init - used to create a new git repo. command: git init
+                   7. git remote add origin <- link ->
+                   8. git remote -v (to verify remote)
+                   9. git branch (to check branch)
+                   10. git branch -M main (to rename branch) / git push -u origin main (-u = upstream)
+                   11. git push origin main
+
+
+7. Branch commands: 1. git branch (to check branch)
+                    2. git branch -M main (to rename branch)
+                    3. git checkout <- branch name -> (to navigate)
+                    4. git checkout -b <- new branch name -> (to create new branch)
+                    5. git branch -d <- branch name -> (to delete branch)
+
+8. Merging Code: 1. git diff <- branch name -> (to compare commits, branches, files & more).
+                 2. git merge <- branch name -> (to merge 2 branches)
+                        OR 
+                    create a PR (PR = Pull Request)
+
+9. Pull Request: It lets you to tell others about changes you've pushed to a branch in a repository on Github.
+        Note : Merging a PR (pull request) is also a commit.
+
+10. git pull origin main: used to fetch and download content from a remote repository and immediately update the local repo to match that content.
+
+11. Merge Conflicts: An event that takes place when Git is unable to automatically resolve differences in code b/w two commits.
+
+12. Fixing Mistakes: 
+        Case 1: Staged some changes by mistake. then use command:  git reset <- file name -> 
+                                                                   git reset
+
+        Case 2: You have commited multiple commits but now you  want to undo the last one commit then use command: git reset HEAD ~1 then check git status
+
+        Case 3: Commited changes (for many commits) -> You have commited multiple commits but now you  want to undo the 2 or 3 from them then use. 
+        Commands: git reset <- commit hash (# we can find hash commit code after using git log commsnds.) ->
+        OR : git reset --hard <- commit hash -> 
+
+13. Q. What is forking?
+Ans. A fork is  a new repository that shares code and visibility settings with the original "upstram" repository.
+        Fork is a rough copy.
+
