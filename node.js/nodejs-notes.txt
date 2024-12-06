@@ -1,0 +1,24 @@
+# ************************* Node Js notes **************************************/
+
+# ************************* Backend 1 (Node.js) *******************************/
+
+1. Qs. What is node.js?
+ans. 1. It is a javascript runtime environment. It is used for server side programming.
+    2. It is not a language, library or framework.
+
+
+2. Node Repl: (REPL stands for Read Evaluate Print Loop)
+    1. To enter into node REPL simply write node into cmd then you can run javascript there.
+    2. simply write .global into cmd 
+    3. simply write .help to run help command.
+    4. simply write .exit command to exit from node REPL.
+
+3. Process: This process provide information about, and control over, the current Node.js process.
+
+4. process.argv : return an array containing the command-line arguments passed when the Node.js process was launched. Run this  in browser.
+5. process.release: Run all of these in node REPL
+6. process.cwd(): current working directory. Run all of these in node REPL.
+
+7. Module.exports : requiring files.
+    1. require() : a built-in function to include external modules that exist in seperate files.
+    2. module.exports : a special object.

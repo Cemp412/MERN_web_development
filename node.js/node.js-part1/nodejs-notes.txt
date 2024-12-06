@@ -1,0 +1,52 @@
+# ************************* Node Js notes **************************************/
+
+# ************************* Backend 1 (Node.js) *******************************/
+
+1. Qs. What is node.js?
+ans. 1. It is a javascript runtime environment. It is used for server side programming.
+    2. It is not a language, library or framework.
+
+
+2. Node Repl: (REPL stands for Read Evaluate Print Loop)
+    1. To enter into node REPL simply write node into cmd then you can run javascript there.
+    2. simply write .global into cmd 
+    3. simply write .help to run help command.
+    4. simply write .exit command to exit from node REPL.
+
+3. Process: This process provide information about, and control over, the current Node.js process.
+
+4. process.argv : return an array containing the command-line arguments passed when the Node.js process was launched. Run this  in browser.
+5. process.release: Run all of these in node REPL
+6. process.cwd(): current working directory. Run all of these in node REPL.
+
+7. Module.exports : requiring files.
+    1. require() : a built-in function to include external modules that exist in seperate files.
+    2. module.exports : a special object.
+
+8. NPM : NPM stands for Node Package Manager. 
+9. Installing Packages: command -> npm install <- package name ->
+10. Qs. What is npm?
+ans. npm is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.
+
+    npm consists of three distinct components:
+
+    the website
+    the Command Line Interface (CLI)
+    the registry.
+
+11. Installing Packages: 1. node_modules: The node_modules folder contains every installed dependency for your project.
+                         2. package-lock.json: It records the exact version of every installed dependency, including its sub-dependencies and their versions.
+
+12. Package.json: The package.json file contains descriptive and functional metadata about a project, such as name, version and dependencies.
+        1. use command: npm install (to install packages if node_modules folder is deleted.)
+        2. To create package.json file. Just wrote command: npm init
+
+13. Local v/s Global: 
+    command: 1. npm install -g <- package name ->
+             2. npm link <- package name ->
+
+
+14. import modules: [require v/s import]
+    1. import {sum} from "./math.js"
+    2. We can't selectively load only the pieces we need with require but with import, we can selectively load only the pieces we need, which can save memory.
+    3. Loading is synchronous for 'require' but can be synchronous for 'import'.
