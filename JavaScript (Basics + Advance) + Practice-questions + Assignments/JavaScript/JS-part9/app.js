@@ -1,5 +1,5 @@
 console.dir(document.all[8]);
-document.all[8].innerText = "Peter parker";
+document.all[8].innerText = "harry parker";
 
 //1. Selecting elements by Id
 let imgObj = document.getElementById("mainImg"); //this is an image object.

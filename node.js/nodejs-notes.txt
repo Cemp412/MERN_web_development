@@ -15,6 +15,7 @@ ans. 1. It is a javascript runtime environment. It is used for server side progr
 
 3. Process: This process provide information about, and control over, the current Node.js process.
 
+
 4. process.argv : return an array containing the command-line arguments passed when the Node.js process was launched. Run this  in browser.
 5. process.release: Run all of these in node REPL
 6. process.cwd(): current working directory. Run all of these in node REPL.
@@ -22,3 +23,122 @@ ans. 1. It is a javascript runtime environment. It is used for server side progr
 7. Module.exports : requiring files.
     1. require() : a built-in function to include external modules that exist in seperate files.
     2. module.exports : a special object.
+
+
+# *************************  Backend 2 (Node: Express) ******************************************/
+
+1. Library v/s Framework: 
+
+    Library : A library is a collection of pre written code that can be used to perform specific tasks.
+    eg: axios.
+
+    Framework: A framework is a set of pre-written code that provides a structure for developing software applications.
+    ex: express.
+
+2. Express: A node.js is web application framework that helps us to make web applications. It is used for server side programming.
+    uses of express: 1. listen to all incoming web requests.
+                     2. parse the data in request.
+                     3. to match response with routes.
+
+3. Getting started with Express: 
+        const express = require("express");
+        const app = express();
+
+        let port = 8080;
+        app.listen(port, () => {
+            console.log(`app listening on port ${port}`);
+        });
+
+    *Ports are the logical endpoints of network connection that is used to exchange information between a web server and web client.
+
+4. Handling requests: 
+    1. app.use(): app.use((req, response) => {
+        console.log("new incoming request");
+    });
+
+5. Routing: It is process of selecting a path for traffic in a network or between or across multiple networks.
+
+    //GET Request
+    app.get("/apple", (req, resp) => {
+        resp.send({
+            name: "apple",
+            color: "red"
+        });
+    });
+
+    
+    //POST Request
+    app.post("/", (req, res) => {
+        res.send("You sent a post request to root.");
+    })
+
+6. Nodemon: It is a package to automatically restart server with code changes.
+
+7. Path Parameters: (req.params)
+    app.get("/ig/:username", (req, res) => {
+        let { username } = req.params;
+        res.send(`This account belongs to @{$username});
+    })
+
+    ex: /Query Strings
+        app.get("/search", (req, res) => {
+            // console.log(req.query);
+            let {q} = req.query;
+            if(!q) {
+                res.send("Nothing searched");
+            }
+            res.send(`Search results for query: ${q}`)
+        })
+
+
+# *********************** Node JS Part 3 (Node: EJS) *********************************/
+
+1. Templating : EJS(Embedded Javascript Templates) 
+    EJS is a simple templating language that lets you generate HTML markup with plain javascript.
+    Packages: handlebar, EJS.
+
+2. Views Directory: 
+    const path = require("path");
+    app.set("views", path.join(__dirname, "/views"));
+
+3. Interpolation Syntax: Interpolation refers to embedding expressions into marked up text.
+
+4. Passing data to EJS: app.get("/rolldice", (req, res) => {
+    let num = Math.floor(Math.random() * 6) + 1;
+    res.render("rollDice.ejs", {diceVal: num});
+})
+<h1>Your dice gave value: <%= diceVal %></h1>
+
+5. Instagram EJS: Create a basic Template for instagram page based on the following route: 
+    app.get("/ig/:username", (req, res) => {
+        let { username } = req.params;
+        // console.log(username)
+        res.render("instagram.ejs", { username })
+    })
+
+6. Conditional Statements in EJS: Adding condition inside EJS
+    <%= if(diceVal == 6) { %>
+        <h2>Nice! Roll dice again. </h2>;
+    <%= } %>
+
+7. Loops: <ul>
+            <% for(let name of followers) { %>
+                <li><%= name %></li>
+            <% } %>
+        </ul>
+
+8. Instagram page with ejs (task)
+9. Serving Static files:  ex: app.use(express.static(folder_name)), ex: app.use(express.static(path.join(__dirname, "public")));
+
+10. Includes: <%- include("includes/head.ejs"); %> 
+
+
+
+# **************************  Miscellaneous **********************************/
+
+1. GET & POST Requests:
+    1). GET : i). Used to GET some response.
+              ii). Data sent in query strings. (limited, string data & visible in URL).
+
+    2). POST: i).Used to POST something (for Create/Write/Update).
+              ii). Data sent via request body (any type of data).
