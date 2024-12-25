@@ -142,3 +142,96 @@ ans. 1. It is a javascript runtime environment. It is used for server side progr
 
     2). POST: i).Used to POST something (for Create/Write/Update).
               ii). Data sent via request body (any type of data).
+
+2. Handling Post Requests: 
+    i). Set up POST request route to get some response.
+    ii). Parse POST request data.
+    app.use(express.urlencoded({ extended:true }));
+    app.use(express.json());
+
+3. Revisiting JS (OOPS) : 
+    1. Object Prototypes: Prototypes are the mechanism by which javascript object inherits features from mone another.It is like a single template object that all objects inherit methods and properties from without having their own company.
+    let arr = [6, 7, 9, 0];
+     ex: arr.__proto__ (reference)
+     Array.prototype (actual object)
+     String.prototype
+
+    note: 1. let's consider an example to change value of (arr.__proto__.push = (n) => { console.log("pushing number : ", n); } then try arr.push(3); //It will change definition of array.push for this particular example.
+    2. "abc".toUpperCase === "xyz".toUpperCase // It returns true as they refer to the same thing.
+    3. arr1.sayHello === arr2.sayHello //It returns false because they were two different methods in two differ arrays.
+
+    Qs. What are prototypes?
+    ans. Every object in Javascript has a built-in property, which is called prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+4. Factory functions: A function that creates objects.
+5. New Operator: The new operator let developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function. //Refer mdn sheet for New Operator
+ex: function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    Person.prototype.talk = function () {
+        console.log(`Hi, my name is ${this.name}`);
+    }
+
+    let p1 = new Person("adma", 25);
+    let p2 = new Person("eve", 25);
+
+6. Classes: Classes are a template for creating objects. The constructor method is a special method of a class for creating and initializing an object an object instance of that class.
+ex: class Person{
+    constructor(name, age) {
+        this.name = name;
+        this.age = age; 
+    }
+
+    talk() {
+        console.log(`Hi, my name is ${this.name}`);
+    }
+}
+let p1 = new Person("adam", 25);
+
+7. Inheritance: Inheritance is mechanism that allows us to create new classes on the basis of already existing classes.
+ex: class Student extends Person{
+        constructor(name, age, marks){
+            super(name, age) {
+                this.marks = marks;
+            }
+        }
+
+        greet() {
+            return "hello";
+        }
+    }
+
+    let s1 = new Student("adam", 100);
+8. Prepare notes from OOPs summary sheet.
+
+
+#*************************************** Backend 4 (REST) ****************************************/
+
+1. Representational State Transfer (REST): REST is an architectural style that defines a set of constraints to be used for creating web services.
+//Twitter API refernce: developer.twitter.com
+
+2. CRUD Operations: i. GET retrieves resources.
+                    ii. POST submit new data to the server.
+                    iii. PUT updates existing data.
+                    iv. PATCH update existing data partially.
+                    v. DELETE removes data.
+
+3. Creating RESTful APIs: 
+    1. GET  /posts to get data for all posts. (Index route)
+    2. POST /posts  to add a new post. (CREATE route)
+    3. GET  /posts/:id to get one post (using id). (VIEW route)
+    4. PATCH/PUT /posts/:id to update specific post. (Update route)
+    5. GET  /posts/:id/edit Serve the edit form. (Edit route)
+    6. DELETE /posts/:id to delete a specific post. (Destroy route)
+
+4. i). Index Route:  ii).Post Route  iii). Show Route iv). Update Route v). Edit Route Vi). Destroy Route
+
+//Note: Refer devdocs.io to check documentation of any framework (angular, express, node etc.)
+
+5. Redirect url: 
+6. Creating UUID Package: UUID(Universally unique Identifier).
+    command: npm install uuid (use npmjs.com)
+
+* Hw problem: Prepare same page for instagram, twitter any of the one.
