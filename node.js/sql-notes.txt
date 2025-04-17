@@ -1,0 +1,45 @@
+Qs. What is a database?
+ans. It is a collection of data in a format that can be easily accessed.
+
+Qs1. Why databases?
+ans. 1. Can store large data.
+     2. features like security, scalability etc.
+     3. Easier to insert, update or delete data.
+
+Qs2. SQL vs NoSQL?
+ans.    SQL                                     NoSQL
+    1. Relational database                     1. Non Relational database.
+    (data stored in Tables.)                (data stored in document/key-val/graphs etc.)
+    eg- MySQL, Oracle, PostgresSQL etc.     eg- MongoDB, cassandra, Neo4j etc.
+
+Qs3. What is SQL?
+ans. SQL stands for (Structured Query Language)
+    SQL is a programming language used to interact with Relational databases.
+
+Qs4. What is table in SQL?
+ans. In SQL, a table is a database object used to store structured data in rows and columns, similar to a spreadsheet. Tables are a fundamental component of relational databases, allowing users to organize and manage data effectively. Each table consists of:
+
+Columns (Fields): Define the structure of the table. Each column has a name, data type, and sometimes constraints (e.g., NOT NULL, UNIQUE).
+
+Example: id, name, age.
+Rows (Records): Contain the actual data in the table. Each row represents a single record in the table.
+
+4. Basic Commands: 
+        1. CREATE DATABASE db_name;
+        2. DROP DATABASE db_name;
+        3. USE db_name;
+
+5. Our First Table: To create a table you need to execute command:
+        CREATE TABLE table_name(column_name1 datatype constraints, column_name2 datatype constraints, column_name3 datatype constraints);
+
+6. To check all data inside a table : SELECT * FROM table_name;
+
+7. Database Queries: 
+        1. CREATE DATABASE db_name;
+        2. CREATE DATABASE IF NOT EXISTS db_name;
+
+        3. DROP DATABASE db_name;
+        4. DROP DATABASE IF EXISTS db_name;
+
+        5. SHOW DATABASES;
+        6. SHOW TABLES;
