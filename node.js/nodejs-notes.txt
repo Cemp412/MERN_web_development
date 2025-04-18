@@ -23,6 +23,10 @@ ans. 1. It is a javascript runtime environment. It is used for server side progr
 7. Module.exports : requiring files.
     1. require() : a built-in function to include external modules that exist in seperate files.
     2. module.exports : a special object.
+8. npm install: It is used to install packages and dependencies in the application and creates node_module folder in the application.
+9. npm install <- package name -> : It is used to install packages.
+10. npm install -g <- package name -> : It is used to install the package globally and later we need to use execute "npm link <- package name ->" to use installed package.
+
 
 
 # *************************  Backend 2 (Node: Express) ******************************************/
