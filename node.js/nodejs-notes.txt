@@ -27,7 +27,15 @@ ans. 1. It is a javascript runtime environment. It is used for server side progr
 9. npm install <- package name -> : It is used to install packages.
 10. npm install -g <- package name -> : It is used to install the package globally and later we need to use execute "npm link <- package name ->" to use installed package.
 
+11. require VS import: import {sum} from "./math.js(full file name)"
+   * We can't selectively load only the pieces we need with require but import, we can selectively load only the pieces we need, which can save memory. 
+    * Loading is synchronous for 'require' but can be asynchronous for 'import'.
 
+#Note: Either we use 'require' or 'import' in our whole project. We will never use 'require' and 'import' together.
+#Note: When you import and export a module make sure it's package.json file contains "type : module" otherwse it gives error like: 
+ReferenceError: module is not defined in ES module scope.
+
+12. npm init: This command is used to create package.json file.
 
 # *************************  Backend 2 (Node: Express) ******************************************/
 
