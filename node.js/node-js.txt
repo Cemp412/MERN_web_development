@@ -1,0 +1,192 @@
+/***************** Node Js Part 2 **************************/
+
+1. Library: A library is a collection of pre-written code that can be used to perform specific tasks. ex: axios
+2. Framework: A framewor is a set of pre-written code that provides a structure for developing software applications. ex: express
+
+1. Express: A node.js web application framework that helps us to make applications. It is used for server side programming.
+
+# Uses of Express:
+    1. Listen for incoming requests.
+    2. Parse request.
+    3. Match response with routes.
+    4. Response.
+
+2. Ports are the logical endpoints of a network connection that is used to exchange information between a web server and a web client.
+ 
+for sending response to server: 
+app.use((req, res) => {
+    console.log(`new incoming request`);
+});
+
+3. If you want to test your API's through "hoppscotch" and it's not working in your browser then go through this link: "https://github.com/hoppscotch/hoppscotch/discussions/2051"
+
+4. Routing: It is process of selecting a path for traffic in a network or between or across multiple networks.
+
+5. Nodemon : It is package which is used to automatically restart the server with code changes.
+
+
+/**************** Node.js Part3 *******************/
+
+1. Templating: 
+    EJS(Embedded JavaScript Engine): EJS is a simple language that lets you generate HTML markup with plain JavaScript.
+
+2. Setting view engine to ejs: app.set("view engine", "ejs");
+3. Interpolation Syntax: Interpolation refers to embedding expressions into marked up text.
+    ex: This is a ${name}.
+4. app.use(express.static(path.join(__dirname, "/public/css"))); <!--- To serve static files ---!>
+app.use(express.static(path.join(__dirname, "public/js")));
+
+5. Includes: It is a method to include sub templates.
+    <%- include("includes/head.ejs"); %>
+
+
+/ ********************** Node.js Part 4 Miscellaneous ********************/
+
+1. Get & Post Requests:
+    Get: 
+    1. Used to Get some response.
+    2. Data sent in query strings (limited, string data & visible in URL)
+
+    Post: 
+    1. Used to POST something (for create/write/update)
+    2. Data sent via request body (any type of data)
+
+2. Object Prototypes:
+    Prototypes are the mechanism by which JavaScript objects inherit features from one another. 
+    It is like single template object that all objects inherit methods and properties from without having their own copy.
+
+    arr.__proto__ (reference)
+    Array.prototype (actual object) {syntax: datatype.prototype}
+    String.prototype
+
+    * Definition:  Every object in JavaScript has built-in property, which is called prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+#Note: 1. Change the Definition of existing prototype function using Js 
+    ex: arr.__proto__.push = (n) => { console.log("pushing number : ", n);}
+    use: arr.push(2)
+    Output: pushing number:  2 (no change in actual array)
+
+2. Compare two arrays: ex: arr.sayHello === arr2.sayHello (Output in boolean)
+    ex: "abc".toUpperCase === "xyz".toUpperCase ( Output: true [It shows both properties reference the same method in memory. /"It shows they both refer to the same function."])
+
+/***************** Factory Functions ********************* */
+function PersonMaker(name, age) {
+    const person = {
+        name: name,
+        age: age,
+        talk() {
+            console.log(`You are talking to ${this.name}`);
+        },
+    }
+    return person;
+}
+
+let p1 = PersonMaker("alok", 56);
+console.log(p1);
+console.log(p1.talk());
+
+/******************** New Operator ************* */
+New Operator: The new Operator lets developers create an instance of user-defined object type or of one of the built-in object types that has a constructor function.
+
+/************** Classes *****************/
+Classes: Classes are a template for creating objects.
+    // The constructor method is a special method of a class for creating and intializing an object instance of that class.
+
+    ex: class Person{
+        constructor(name, age) {  //constructor defined using "constructor" keyword.
+            this.name = name;
+            this.age = age;
+        }
+
+        talk() {
+            console.log(`Hi, my name is ${this.name}`);
+        }
+    }
+
+    let p1 = new Person("owesh", 23);
+
+/******** Inheritance *************/
+Inheritance: It is a mechanism that allows us to create new classes on the basis of already existing classes.
+ex: class Student extends Person {
+    constructor(name, age, marks) {
+        super(name, age);
+        this.marks = marks;
+    }
+
+    greet() {
+        return "hello !";
+    }
+}
+
+let s1 = new Student("adam", 25, 95);
+
+
+/******************** Backend 4 Rest *****************/
+website: developer.twitter.com
+
+REST: Representational State Transfer
+* Rest is an architectural style that defines a set of constraints to be used for creating web services.
+
+# Creating Restful APIs 
+Method Route    Use                             Route Name
+GET    /posts   to get data for all posts.      Index
+POST   /posts   to add a new post.              create
+GET    /posts/:id  to get one post (using id)   view
+PATCH/PUT   /posts/:id  to update specific post  update
+DELETE /posts/:id  to delete specific post.      destroy
+
+#source : https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+#express documentation: https://devdocs.io/express/index
+
+# Implement : POST/posts
+    Create route: 
+    POST        /posts      to add a new post
+
+    for this we need to create 2 routes : 
+    * Serve the form :  GET     /posts/new
+    * Add the new post : POST   /posts 
+
+    (user, content) - through form, Post route to add new post to arr.
+
+
+#Redirect: res.redirect(URL) 
+
+#Implement: GET/posts/:id
+    * Show route:  GET   /posts/:id    to get one post (using id)
+
+#Implement: Create id for Posts
+UUID Package : Universally unique identifier 
+command: npm install uuid
+
+#Implement: PATCH /posts/:id
+    * Update route: PATCH/PUT  /posts/:id  to update specific post
+
+#Create form for update: Edit route
+    * Serve the edit form:  GET     /posts/:id/edit
+
+#Implement:  /posts/:id
+    * Destroy route: DELETE  /posts/:id  to delete specific post.
+
+# Creating RESTFUL API's: 
+    GET   /posts   to get data for all posts    INDEX (main)
+    POST  /posts    to add a new post           CREATE
+    GET   /posts/:id  to get one post (using id) VIEW
+    PATCH /posts/:id  to update specific post     UPDATE
+    DELETE /posts/:id  to delete specific post    DESTROY
+
+
+/************************ Starting With SQL *******************/
+
+Q. What is database?
+Ans. It is a collection of data in a format that can be easily accessed.
+
+Q. Why databases?
+Ans. * Can store large data.
+     * features like security, scalability etc.
+     * Easier to insert, update or delete data.
+
+# SQL V/s NO SQL  
+
+
+    SQL : Relational database (data stored in tables) ex: MYSQL, Oracle, PostgresSQL etc.
+    NO SQL: Non relational database (data stored in document/key-val/graphs etc.) ex: MongoDB, Cassandra, Neo4j etc. 
