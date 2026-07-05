@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body { background-color: #fafafa; font-family: -apple-system, sans-serif; margin: 0; }
+  .profile-feed { max-width: 470px; margin: 0 auto; padding-top: 20px; }
+  
+  /* Individual Post Card */
+  .post-card {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  .avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%; background: #efefef;
+    margin-right: 10px;
+  }
+  .username { font-weight: 600; font-size: 14px; }
+  
+  .post-image { width: 100%; display: block; }
+  
+  .post-footer { padding: 12px; }
+  .action-icons { font-size: 20px; margin-bottom: 8px; }
+  .likes-count { font-weight: 600; font-size: 14px; margin-bottom: 5px; }
+  .comment-link { color: #8e8e8e; font-size: 14px; text-decoration: none; }
+
+  /* Print Styles */
+  @media print {
+    .post-card { break-inside: avoid; border: 1px solid #000; }
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+
+<div class="profile-feed">
+  <!-- Post Card 1 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="avatar"></div>
+      <span class="username">User_Name</span>
+    </div>
+    <img src="https://via.placeholder.com" class="post-image" alt="Post 1">
+    <div class="post-footer">
+      <div class="action-icons">❤️ 💬 ✈️</div>
+      <div class="likes-count">1,540 likes</div>
+      <div class="comment-link">View all 24 comments</div>
+    </div>
+  </div>
+
+  <!-- Post Card 2 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="avatar"></div>
+      <span class="username">User_Name</span>
+    </div>
+    <img src="https://via.placeholder.comx400" class="post-image" alt="Post 2" />
+    <div class="post-footer">
+      <div class="action-icons">❤️ 💬 ✈️</div>
+      <div class="likes-count">892 likes</div>
+      <div class="comment-link">View all 12 comments</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
