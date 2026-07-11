@@ -32,9 +32,14 @@ Rows (Records): Contain the actual data in the table. Each row represents a sing
 5. Our First Table: To create a table you need to execute command:
         CREATE TABLE table_name(column_name1 datatype constraints, column_name2 datatype constraints, column_name3 datatype constraints);
 
-6. To check all data inside a table : SELECT * FROM table_name;
+        ex: CREATE TABLE Student(roll_no INT, name varchar(30), age INT(11));
 
-7. Database Queries: 
+6. Insert data into table: 
+        INSERT INTO Student VALUES (101, "adam", 12), (102, "bob", 14);
+
+7. To check all data inside a table : SELECT * FROM table_name;
+
+8. Database Queries: 
         1. CREATE DATABASE db_name;
         2. CREATE DATABASE IF NOT EXISTS db_name;
 
@@ -43,3 +48,62 @@ Rows (Records): Contain the actual data in the table. Each row represents a sing
 
         5. SHOW DATABASES;
         6. SHOW TABLES;
+
+
+9. Table Queries: Create, Insert, Update, Alter, Truncate, Delete
+
+        # Create Table command: Create Table table_name (column_name1 datatype constraint, column_name2 datatype constraint);
+                ex: Create Table User (id INT NOT NULL, age INT NOT NULL, name VARCHAR(30) NOT NULL, email VARCHAR(50) UNIQUE, followers INT DEFAULT 0, following INT DEFAULT 0);
+
+        # INSERT INTO Table: INSERT INTO Table_name (column name1, column name 2) VALUES(Col1_v1, col2_v1), (col1_v2, col_2_v2);
+                ex: INSERT INTO USER (id, age, name, email, folowers, following) VALUES(1, "16", "Adam", "adam@email.com", 5, 8), (2, "18", "Adnan", "adnan@email.com", 23, 83);
+
+10. DATATYPES:
+        DATATYPE    DESCRIPTION                                                 USAGE
+        1. CHAR : string(0, 255) can store characters of fixed length            CHAR(50)
+        2. VARCHAR : string(0, 255) can store characters up to given length      VARCHAR(50)
+        3. BLOB : string(0, 65535) can store binary large object                 BLOB(1000)
+        4. INT : Integer( -2,147,483,648 to 2,147,483,647)                       INT
+        5. TINYINT : Integer(-128 to 127)                                        TINYINT
+        6. BIGINT : Integer(-9,233,372,036,854,775,808 to 9,233,372,036,854,775,807) BIGINT
+        7. BIT : can store x-bit values, x can range from 1 to 64                 BIT(2)
+        8. FLOAT : Decimal number - with precision to 23 digits                  FLOAT
+        9. DOUBLE : Decimal number - with 24 to 53 digits                        DOUBLE
+        10. BOOLEAN : Boolean values 0 or 1                                      BOOLEAN
+        11. DATE : date in format of YYYY-MM-DD ranging from 1000-01-01 to 9999-12-31 DATE
+        12. YEAR : year in 4 digits fromat ranging from 1901 to 2155              YEAR
+
+
+11. CONSTRAINTS : Rules for data in the table.
+        NOT NULL : Columns cannot have a null value.
+        UNIQUE : All values in column are different.
+        DEFAULT: Stes the default value of a column.
+        CHECK : It can limit the values allowed in a column.
+
+        EX: i.  Salary INT DEFAULT 25000;
+            ii. CONSTRAINT age_check CHECK(age >= 18 AND city = "Delhi");
+
+        ex: Create Table User (id INT NOT NULL, age INT ,name VARCHAR(30) NOT NULL, email VARCHAR(50) UNIQUE, followers INT DEFAULT 0, following INT DEFAULT 0,  CONSTRAINT age_check CHECK(age >= 13));
+
+12. Other Important constraint Key : 
+        1. PRIMARY KEY : makes a column unique & not null but used only for one. A table can have only one primary key.
+        ex: CREATE TABLE temp( id int not null, PRIMARY KEY (id));
+
+        2. FOREIGN KEY : prevent actions that would destroy link b/w tables.
+        ex: CREATE TABLE temp( cust_id int, FOREIGN KEY (cust_id) references customer(id));
+
+13. Q. What are keys?
+Ans. Keys are special column in the table.
+
+        1. PRIMARY KEY: It is a column (or set of columns) in a table that uniquely identifies each row. There is only 1 PK & it should not be null.
+
+        2. FOREIGN KEY (FKs) : It is a column (or a set of columns) in a table that refers to the primary key in another tables. FOREIGN Keys can have duplicate & null values. They can have multiple FKs.
+
+14. SELECT Command: Select & show data from the DB.
+        Syntax: SELECT col1, col2 FROM table_name;
+        ex: SELECT id, name, age from user;
+        Syntax to show all: SELECT * FROM table_name;
+        ex: SELECT * from user;
+
+15. DISTINCT: It is used to show unique records from table.
+        Syntax: SELECT DISTINCT age from user;

@@ -190,3 +190,8 @@ Ans. * Can store large data.
 
     SQL : Relational database (data stored in tables) ex: MYSQL, Oracle, PostgresSQL etc.
     NO SQL: Non relational database (data stored in document/key-val/graphs etc.) ex: MongoDB, Cassandra, Neo4j etc. 
+
+# Sql: (Structured Query Language) Sql is a programming language used to interact with relational databases.
+    HTML - structure
+    CSS - style
+    JS - functionality
