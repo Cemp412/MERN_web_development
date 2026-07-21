@@ -175,7 +175,7 @@ command: npm install uuid
     DELETE /posts/:id  to delete specific post    DESTROY
 
 
-/************************ Starting With SQL *******************/
+/************************ Starting With SQL Node.js part-5 *******************/
 
 Q. What is database?
 Ans. It is a collection of data in a format that can be easily accessed.
@@ -195,3 +195,72 @@ Ans. * Can store large data.
     HTML - structure
     CSS - style
     JS - functionality
+
+
+/*************** Node.js Part 6 (Backend with SQL) *******************/
+#Faker :  npm i @faker-js/faker
+    let getRandomUser = () => {
+    return {
+        id: faker.string.uuid(),
+        username: faker.internet.username(),
+        email: faker.internet.email(),
+        password: faker.internet.password(),
+    };
+    }
+
+    console.log(getRandomUser()); */
+    export const users = faker.helpers.multiple(createRandomUser, {
+    count: 5,
+    });
+
+
+#command to connect terminal with mysql on windows: & "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p
+Password: Chanchal#8
+
+#Use Of sql using "schema.sql" file: 
+    Step 1: To Start "MySQL80" service type "services.msc" in window key + R 
+    Step 2: First connect terminal with sql using cmd: & "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p
+            Password: Chanchal#8
+    step 3. After successful connection type ex: mysql> source schema.sql (sql filename)
+    step 4: Then select database : use database name ex: use delta_app
+
+# CREATE TABLE user: CREATE TABLE user (id  VARCHAR(50) PRIMARY KEY, username VARCHAR(50) unique, email VARCHAR(50) UNIQUE NOT NULL, password VARCHAR(50) NOT NULL);
+
+#create the connection to the database
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password : 'Chanchal#8',
+    database: 'delta_app'
+});
+
+#Insert into database: 
+    let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+    let users = [
+        ['123c', '123_newuserc', 'newuserc@mailinator.com', 'newuserc'], 
+        ['123d', '123_newuserd', 'newuserd@mailinator.com', 'newuserd'],
+    ];
+
+    try{
+    connection.query(q, [users], (err, result) => {
+        if(err) throw err;
+        console.log(result);
+        console.log(result.length);
+        console.log(result[0]);
+        console.log(result[1]);
+    });
+    }
+    catch (err) {
+    console.log(err);
+    }
+    connection.end(); //close the connection
+
+#Routing: REST related tasks.
+    1. GET / -> show number of users in table.
+    2. GET /user -> show users(email,id,username)ejs
+    3. PATCH -> /user/:id -> username edit
+    4. POST -> /user -> new user
+    5. DELETE -> /user/:id -> user delete
+
+# Homework Task: 1. Create a form to Add a new user to the database.
+2. Create a form to delete a user from database if they enter correct email id & password.
